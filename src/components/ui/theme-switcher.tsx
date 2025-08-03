@@ -6,9 +6,10 @@ import { useTheme } from "next-themes";
 type TTheme = "system" | "light" | "dark";
 
 export const ThemeSwitcher = () => {
-  const { theme, setTheme } = useTheme();
-
-  const currentTheme = (theme as TTheme) || "system";
+  const { theme, setTheme, resolvedTheme } = useTheme();
+  
+  // Use resolvedTheme for consistent client/server rendering
+  const currentTheme = (resolvedTheme as TTheme) || "system";
 
   return (
     <fieldset className="flex h-8 p-0 m-0 rounded-[999999px] border border-border">

@@ -1,8 +1,8 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { Card, CardContent } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
+import { Button } from '@/components/ui/button';
 import { 
   BookOpen, 
   Brain, 
@@ -11,202 +11,278 @@ import {
   Target, 
   Sparkles,
   ArrowRight,
-  CheckCircle
+  CheckCircle,
+  Zap,
+  Trophy,
+  Lightbulb,
+  Rocket,
+  Shield,
+  Globe
 } from 'lucide-react';
+import {
+  MinimalCard,
+  MinimalCardImage,
+  MinimalCardTitle,
+  MinimalCardDescription,
+  MinimalCardContent,
+  MinimalCardFooter,
+} from '@/components/ui/minimal-card';
+import { BentoGrid, BentoCard } from '@/components/ui/bento-grid';
 
-const features = [
+const coreFeatures = [
   {
-    title: 'From Learning to Doing',
-    description: 'Zemon bridges the gap between learning and doing, helping you become a confident, job-ready developer through real-world projects.',
-    icon: BookOpen,
-    color: 'from-blue-500 to-cyan-500',
-    benefits: [
-      'Project-based learning approach',
-      'Real-world application focus',
-      'Portfolio building opportunities',
-      'Industry-aligned curriculum'
-    ]
+    title: "The Forge",
+    subtitle: "Learn & Build",
+    description: "Access curated learning resources to build your programming skills from the ground up.",
+    image: "/mockup.jpeg",
+    color: "from-blue-500 to-cyan-500",
+    highlights: [
+      "Curated learning resources",
+      "Multiple difficulty levels", 
+      "Resource bookmarking",
+      "Progress tracking"
+    ],
+    stats: "100+ Resources"
   },
   {
-    title: 'Your Personal AI Tutor',
-    description: 'Get unstuck with AI-powered hints, code analysis, and personalized learning recommendations.',
-    icon: Brain,
-    color: 'from-purple-500 to-pink-500',
-    benefits: [
-      'Intelligent problem hints',
-      'Code analysis and feedback',
-      'Personalized recommendations',
-      'Learning path optimization'
-    ]
+    title: "The Crucible", 
+    subtitle: "Test & Solve",
+    description: "Test your skills with 500+ challenging problems designed to push your limits.",
+    image: "/mockup.jpeg",
+    color: "from-purple-500 to-pink-500",
+    highlights: [
+      "500+ programming challenges",
+      "AI-powered hints",
+      "Solution analysis",
+      "Progress tracking"
+    ],
+    stats: "500+ Challenges"
   },
   {
-    title: 'Compete, Collaborate, and Grow',
-    description: 'Join a thriving community of builders. Participate in coding competitions, showcase your projects, and connect with peers and mentors.',
-    icon: Users,
-    color: 'from-orange-500 to-red-500',
-    benefits: [
-      'Active community engagement',
-      'Coding competitions',
-      'Peer mentorship opportunities',
-      'Professional networking'
-    ]
+    title: "The Arena",
+    subtitle: "Compete & Connect", 
+    description: "Compete with peers in coding competitions and climb the leaderboard.",
+    image: "/mockup.jpeg",
+    color: "from-orange-500 to-red-500",
+    highlights: [
+      "Weekly competitions",
+      "Real-time leaderboards",
+      "Community channels",
+      "Project showcase"
+    ],
+    stats: "10K+ Students"
   }
 ];
 
-const additionalFeatures = [
+const innovationFeatures = [
   {
-    icon: Code,
-    title: '500+ Challenges',
-    description: 'Comprehensive problem library'
+    name: "AI-Powered Learning",
+    description: "Personalized assistance and intelligent hints to guide your learning journey.",
+    Icon: Brain,
+    href: "/about",
+    cta: "Learn more",
+    className: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3"
   },
   {
-    icon: Target,
-    title: 'Skill Tracking',
-    description: 'Monitor your progress'
+    name: "Real-time Collaboration",
+    description: "Connect with peers, share solutions, and learn together in real-time.",
+    Icon: Users,
+    href: "/about", 
+    cta: "Explore",
+    className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3"
   },
   {
-    icon: Sparkles,
-    title: 'AI Assistance',
-    description: 'Smart learning support'
-  }
+    name: "Advanced Analytics",
+    description: "Track your progress with detailed insights and performance metrics.",
+    Icon: Target,
+    href: "/developers",
+    cta: "Discover",
+    className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4"
+  },
+  {
+    name: "Enterprise Security",
+    description: "Built with enterprise-grade security and privacy protection.",
+    Icon: Shield,
+    href: "/developers",
+    cta: "Learn more",
+    className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2"
+  },
+  {
+    name: "Global Community",
+    description: "Join thousands of developers from around the world.",
+    Icon: Globe,
+    href: "/about",
+    cta: "Join now",
+    className: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4"
+  },
 ];
 
 export default function FeaturesSection() {
   return (
-    <section className="py-20 px-4 bg-gradient-to-b from-muted/20 to-background">
+    <section className="py-24 px-4 bg-gradient-to-b from-background via-muted/20 to-background">
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <Badge variant="secondary" className="mb-4">
+          <Badge variant="outline" className="mb-6 px-4 py-2 text-sm">
             <Sparkles className="w-4 h-4 mr-2" />
-            Why Choose Zemon
+            Core Ecosystem
           </Badge>
-          <h2 className="text-3xl md:text-5xl font-bold mb-6">
-            Features that
-            <span className="gradient-text"> Transform</span>
+          <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+            Three Pillars of
+            <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Excellence</span>
           </h2>
-          <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Discover how Zemon's innovative features help you learn, build, and grow as a developer.
+          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            Our ecosystem transforms how you learn, practice, and grow as a developer.
           </p>
         </motion.div>
 
-        {/* Main Features */}
-        <div className="grid lg:grid-cols-3 gap-8 mb-16">
-          {features.map((feature, index) => (
+        {/* Core Features Grid */}
+        <div className="grid lg:grid-cols-3 gap-8 mb-24">
+          {coreFeatures.map((feature, index) => (
             <motion.div
               key={feature.title}
-              initial={{ opacity: 0, y: 30 }}
+              initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.8, delay: index * 0.2 }}
               viewport={{ once: true }}
             >
-              <Card className="h-full group hover:shadow-xl transition-all duration-300 border-0 bg-card/50 backdrop-blur-sm">
-                <CardContent className="p-8">
-                  <div className={`w-16 h-16 rounded-full bg-gradient-to-r ${feature.color} flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300`}>
-                    <feature.icon className="w-8 h-8 text-white" />
+              <MinimalCard className="h-full group hover:scale-[1.02] transition-all duration-500">
+                <MinimalCardImage 
+                  src={feature.image} 
+                  alt={`${feature.title} preview`}
+                  className="mb-4"
+                />
+                <MinimalCardContent>
+                  <div className="flex items-center justify-between mb-4">
+                    <Badge variant="secondary" className="text-xs">
+                      {feature.stats}
+                    </Badge>
                   </div>
                   
-                  <h3 className="text-2xl font-bold mb-4">{feature.title}</h3>
-                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                  <MinimalCardTitle className="text-2xl font-bold mb-2">
+                    {feature.title}
+                  </MinimalCardTitle>
+                  <Badge variant="outline" className="mb-4 text-xs">
+                    {feature.subtitle}
+                  </Badge>
+                  <MinimalCardDescription className="text-base leading-relaxed mb-6">
                     {feature.description}
-                  </p>
-                  
-                  <ul className="space-y-3">
-                    {feature.benefits.map((benefit, benefitIndex) => (
-                      <li key={benefitIndex} className="flex items-start">
-                        <CheckCircle className="w-5 h-5 text-primary mr-3 mt-0.5 flex-shrink-0" />
-                        <span className="text-sm">{benefit}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
+                  </MinimalCardDescription>
+                </MinimalCardContent>
+                
+                <MinimalCardFooter>
+                  <Button variant="outline" size="sm" className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                    Explore {feature.title}
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                  </Button>
+                </MinimalCardFooter>
+              </MinimalCard>
             </motion.div>
           ))}
         </div>
 
-        {/* Additional Features Grid */}
+        {/* Innovation Features */}
         <motion.div
-          className="grid md:grid-cols-3 gap-6 mb-16"
+          className="mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          {additionalFeatures.map((feature, index) => (
-            <div
-              key={feature.title}
-              className="flex items-center p-6 rounded-lg bg-card/30 backdrop-blur-sm border border-border/50 hover:bg-card/50 transition-colors duration-300"
-            >
-              <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center mr-4">
-                <feature.icon className="w-6 h-6 text-primary" />
-              </div>
-              <div>
-                <h4 className="font-semibold text-lg">{feature.title}</h4>
-                <p className="text-sm text-muted-foreground">{feature.description}</p>
-              </div>
-            </div>
-          ))}
+          <div className="text-center mb-12">
+            <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              Powered by <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Innovation</span>
+            </h3>
+            <p className="text-muted-foreground max-w-2xl mx-auto">
+              Advanced features that make learning more effective and engaging
+            </p>
+          </div>
+          
+          <BentoGrid className="lg:grid-rows-3">
+            {innovationFeatures.map((innovationFeature) => (
+              <BentoCard key={innovationFeature.name} {...innovationFeature} />
+            ))}
+          </BentoGrid>
         </motion.div>
 
         {/* Stats Section */}
         <motion.div
-          className="grid md:grid-cols-4 gap-8 text-center"
+          className="grid md:grid-cols-4 gap-8 mb-20"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="p-6 rounded-lg bg-card/30 backdrop-blur-sm">
-            <div className="text-3xl font-bold text-primary mb-2">500+</div>
-            <div className="text-sm text-muted-foreground">Programming Challenges</div>
+          <div className="text-center">
+            <div className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
+              500+
+            </div>
+            <div className="text-sm text-muted-foreground font-medium">
+              Programming Challenges
+            </div>
           </div>
-          <div className="p-6 rounded-lg bg-card/30 backdrop-blur-sm">
-            <div className="text-3xl font-bold text-primary mb-2">10K+</div>
-            <div className="text-sm text-muted-foreground">Active Students</div>
+          <div className="text-center">
+            <div className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
+              10K+
+            </div>
+            <div className="text-sm text-muted-foreground font-medium">
+              Active Students
+            </div>
           </div>
-          <div className="p-6 rounded-lg bg-card/30 backdrop-blur-sm">
-            <div className="text-3xl font-bold text-primary mb-2">100+</div>
-            <div className="text-sm text-muted-foreground">Learning Resources</div>
+          <div className="text-center">
+            <div className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
+              100+
+            </div>
+            <div className="text-sm text-muted-foreground font-medium">
+              Learning Resources
+            </div>
           </div>
-          <div className="p-6 rounded-lg bg-card/30 backdrop-blur-sm">
-            <div className="text-3xl font-bold text-primary mb-2">24/7</div>
-            <div className="text-sm text-muted-foreground">AI Support</div>
+          <div className="text-center">
+            <div className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
+              24/7
+            </div>
+            <div className="text-sm text-muted-foreground font-medium">
+              AI Support
+            </div>
           </div>
         </motion.div>
 
         {/* CTA Section */}
         <motion.div
-          className="text-center mt-16"
+          className="text-center"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 text-primary border border-primary/20 mb-6">
-            <Sparkles className="w-5 h-5 mr-2" />
-            Ready to experience the future of learning?
-          </div>
-          <p className="text-lg text-muted-foreground mb-6">
-            Join thousands of students who are already building their future with Zemon
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <button className="inline-flex items-center px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors duration-300">
-              Start Learning Now
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </button>
-            <button className="inline-flex items-center px-8 py-4 border border-border rounded-lg font-semibold hover:bg-muted transition-colors duration-300">
-              Watch Demo
-            </button>
-          </div>
+          <MinimalCard className="max-w-2xl mx-auto p-8 text-center">
+            <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-primary to-accent flex items-center justify-center mx-auto mb-6">
+              <Rocket className="w-8 h-8 text-white" />
+            </div>
+            <MinimalCardTitle className="text-2xl font-bold mb-4">
+              Ready to Build Your Future?
+            </MinimalCardTitle>
+            <MinimalCardDescription className="text-lg mb-8">
+              Join thousands of students who are already transforming their careers with Zemon
+            </MinimalCardDescription>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="group">
+                Start Learning Now
+                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+              </Button>
+              <Button variant="outline" size="lg">
+                Watch Demo
+              </Button>
+            </div>
+          </MinimalCard>
         </motion.div>
       </div>
     </section>
   );
-} 
+}
