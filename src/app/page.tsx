@@ -5,7 +5,7 @@ import { HeroSectionDemo } from '@/components/landing/HeroSectionDemo';
 import EcosystemSection from '@/components/landing/EcosystemSection';
 import FeaturesSection from '@/components/landing/FeaturesSection';
 import HowItWorksSection from '@/components/landing/HowItWorksSection';
-import PricingSection from '@/components/landing/PricingSection';
+import FAQSection from '@/components/landing/FAQSection';
 import TestimonialsSection from '@/components/landing/TestimonialsSection';
 import Footer from '@/components/landing/Footer';
 
@@ -17,7 +17,7 @@ export default function Home() {
       <EcosystemSection />
       <FeaturesSection />
       <HowItWorksSection />
-      <PricingSection />
+      <FAQSection />
       <TestimonialsSection />
       <Footer />
     </main>
