@@ -86,26 +86,6 @@ export default function HowItWorksSection() {
             imageHeight="h-[500px]"
           />
         </motion.div>
-
-        {/* Simple CTA */}
-        <motion.div
-          className="text-center mt-20"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-gradient-to-r from-primary/10 to-accent/10 text-primary border border-primary/20 mb-6 backdrop-blur-sm">
-            <Sparkles className="w-5 h-5 mr-2" />
-            Ready to start your journey?
-          </div>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-            <Button size="lg" className="group bg-gradient-to-r from-primary to-primary/90 hover:from-primary/90 hover:to-primary text-primary-foreground px-8 py-4 rounded-xl font-semibold shadow-lg hover:shadow-xl transition-all duration-300">
-              Get Started for Free
-              <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-            </Button>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

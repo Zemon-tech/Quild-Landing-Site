@@ -252,36 +252,6 @@ export default function FeaturesSection() {
             </div>
           </div>
         </motion.div>
-
-        {/* CTA Section */}
-        <motion.div
-          className="text-center"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <MinimalCard className="max-w-2xl mx-auto p-8 text-center">
-            <div className="w-16 h-16 rounded-2xl bg-gradient-to-r from-primary to-accent flex items-center justify-center mx-auto mb-6">
-              <Rocket className="w-8 h-8 text-white" />
-            </div>
-            <MinimalCardTitle className="text-2xl font-bold mb-4">
-              Ready to Build Your Future?
-            </MinimalCardTitle>
-            <MinimalCardDescription className="text-lg mb-8">
-              Join thousands of students who are already transforming their careers with Zemon
-            </MinimalCardDescription>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="group">
-                Start Learning Now
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-              </Button>
-              <Button variant="outline" size="lg">
-                Watch Demo
-              </Button>
-            </div>
-          </MinimalCard>
-        </motion.div>
       </div>
     </section>
   );

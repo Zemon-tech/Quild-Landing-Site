@@ -210,25 +210,6 @@ export default function EcosystemSection() {
             </div>
           </div>
         </motion.div>
-
-        {/* Bottom CTA */}
-        <motion.div
-          className="text-center mt-16"
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          viewport={{ once: true }}
-        >
-          <div className="inline-flex items-center px-6 py-3 rounded-full bg-primary/10 text-primary border border-primary/20 mb-6">
-            Ready to start your journey with Zemon's ecosystem?
-          </div>
-          <div className="flex justify-center">
-            <Button size="lg" variant="default" className="text-primary-foreground px-8 py-6">
-              Get Started Today
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Button>
-          </div>
-        </motion.div>
       </div>
     </section>
   );

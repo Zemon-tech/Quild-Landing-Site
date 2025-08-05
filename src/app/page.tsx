@@ -17,8 +17,8 @@ export default function Home() {
       <EcosystemSection />
       <FeaturesSection />
       <HowItWorksSection />
-      <FAQSection />
       <TestimonialsSection />
+      <FAQSection />
       <Footer />
     </main>
   );
