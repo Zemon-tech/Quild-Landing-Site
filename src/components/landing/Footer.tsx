@@ -9,6 +9,7 @@ import {
   ExternalLink,
   Sparkles
 } from 'lucide-react';
+import { SubjectIcon } from '@/components/ui/icons';
 
 const footerLinks = {
   product: [
@@ -52,8 +53,8 @@ export default function Footer() {
           {/* Brand Section */}
           <div className="lg:col-span-2">
             <div className="flex items-center mb-4">
-              <Sparkles className="w-8 h-8 text-primary mr-2" />
-              <span className="text-2xl font-bold">Zemon</span>
+              <SubjectIcon className="w-8 h-8 text-primary mr-2" />
+              <span className="text-2xl font-bold">Quild</span>
             </div>
             <p className="text-muted-foreground mb-6 max-w-md">
               Built for the Builder Within You. The ultimate platform for college students to learn, build, and showcase their programming skills.

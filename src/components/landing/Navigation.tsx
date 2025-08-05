@@ -6,9 +6,9 @@ import { Button } from '@/components/ui/button';
 import { 
   Menu, 
   X, 
-  Sparkles,
   ChevronDown
 } from 'lucide-react';
+import { SubjectIcon } from '@/components/ui/icons';
 
 const navigationItems = [
   { name: 'Features', href: '#features' },
@@ -28,8 +28,8 @@ export default function Navigation() {
           {/* Logo */}
           <div className="flex items-center">
             <div className="flex items-center">
-              <Sparkles className="w-8 h-8 text-primary mr-2" />
-              <span className="text-xl font-bold">Zemon</span>
+              <SubjectIcon className="w-8 h-8 text-primary mr-2" />
+              <span className="text-xl font-bold">Quild</span>
             </div>
           </div>
 
