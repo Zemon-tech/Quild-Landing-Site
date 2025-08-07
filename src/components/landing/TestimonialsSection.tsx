@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
 import { Logos3 } from '@/components/blocks/logos3';
 import { TestimonialsColumn } from '@/components/blocks/testimonials-columns-1';
-import { Sparkles, Users, GraduationCap } from 'lucide-react';
+import { Sparkles, Users } from 'lucide-react';
 
 const testimonials = [
   {
@@ -162,7 +162,7 @@ export default function TestimonialsSection() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 justify-items-center items-start max-w-5xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             <div className="h-[600px] overflow-hidden">
               <TestimonialsColumn 
                 testimonials={testimonials}

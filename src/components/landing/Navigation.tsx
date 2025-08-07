@@ -5,14 +5,14 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { 
   Menu, 
-  X, 
-  ChevronDown
+  X,
 } from 'lucide-react';
 import { SubjectIcon } from '@/components/ui/icons';
+import Link from 'next/link';
 
 const navigationItems = [
   { name: 'Features', href: '#features' },
-  { name: 'Pricing', href: '#pricing' },
+  { name: 'Pricing', href: '/pricing' },
   { name: 'About', href: '/about' },
   { name: 'Blog', href: '/blog' },
   { name: 'Developers', href: '/developers' }
@@ -27,22 +27,22 @@ export default function Navigation() {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="flex items-center">
+            <Link href="/" className="flex items-center hover:opacity-80 transition-opacity">
               <SubjectIcon className="w-8 h-8 text-primary mr-2" />
               <span className="text-xl font-bold">Quild</span>
-            </div>
+            </Link>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-8">
             {navigationItems.map((item) => (
-              <a
+              <Link
                 key={item.name}
                 href={item.href}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-300"
               >
                 {item.name}
-              </a>
+              </Link>
             ))}
           </div>
 
@@ -81,14 +81,14 @@ export default function Navigation() {
             >
               <div className="py-4 space-y-4">
                 {navigationItems.map((item) => (
-                  <a
+                  <Link
                     key={item.name}
                     href={item.href}
                     className="block text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-300"
                     onClick={() => setIsOpen(false)}
                   >
                     {item.name}
-                  </a>
+                  </Link>
                 ))}
                 <div className="pt-4 space-y-3">
                   <Button variant="ghost" className="w-full justify-start">

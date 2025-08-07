@@ -48,7 +48,7 @@ export default function EcosystemSection() {
             The Zemon <span className="gradient-text">Ecosystem</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            Discover the three pillars of Zemon's ecosystem designed to help you learn, practice, and showcase your programming skills.
+            Discover the three pillars of Zemon&apos;s ecosystem designed to help you learn, practice, and showcase your programming skills.
           </p>
         </motion.div>
 
@@ -209,7 +209,7 @@ export default function EcosystemSection() {
               </div>
             </div>
           </div>
-        </motion.div>
+        </motion.div> 
       </div>
     </section>
   );

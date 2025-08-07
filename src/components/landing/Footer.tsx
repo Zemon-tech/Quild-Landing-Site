@@ -7,7 +7,6 @@ import {
   MessageCircle, 
   Mail, 
   ExternalLink,
-  Sparkles
 } from 'lucide-react';
 import { SubjectIcon } from '@/components/ui/icons';
 
@@ -25,7 +24,6 @@ const footerLinks = {
     { name: 'Contact', href: '/contact' }
   ],
   resources: [
-    { name: 'Help Center', href: '/help' },
     { name: 'Community', href: '/community' },
     { name: 'Tutorials', href: '/tutorials' },
     { name: 'Support', href: '/support' }

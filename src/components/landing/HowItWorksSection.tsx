@@ -2,15 +2,9 @@
 
 import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import { FeatureSteps } from '@/components/ui/feature-section';
 import { 
   Sparkles,
-  ArrowRight,
-  Rocket,
-  Code,
-  Trophy,
-  Users
 } from 'lucide-react';
 
 const journeyFeatures = [
@@ -83,7 +77,6 @@ export default function HowItWorksSection() {
             features={journeyFeatures}
             title="Your Journey to Success"
             autoPlayInterval={4000}
-            imageHeight="h-[500px]"
           />
         </motion.div>
       </div>

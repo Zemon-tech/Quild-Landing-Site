@@ -4,18 +4,11 @@ import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { 
-  BookOpen, 
   Brain, 
   Users, 
-  Code, 
   Target, 
   Sparkles,
   ArrowRight,
-  CheckCircle,
-  Zap,
-  Trophy,
-  Lightbulb,
-  Rocket,
   Shield,
   Globe
 } from 'lucide-react';
@@ -34,7 +27,7 @@ const coreFeatures = [
     title: "The Forge",
     subtitle: "Learn & Build",
     description: "Access curated learning resources to build your programming skills from the ground up.",
-    image: "/mockup.jpeg",
+    image: "/mockup.png",
     color: "from-blue-500 to-cyan-500",
     highlights: [
       "Curated learning resources",
@@ -48,7 +41,7 @@ const coreFeatures = [
     title: "The Crucible", 
     subtitle: "Test & Solve",
     description: "Test your skills with 500+ challenging problems designed to push your limits.",
-    image: "/mockup.jpeg",
+    image: "/mockup.png",
     color: "from-purple-500 to-pink-500",
     highlights: [
       "500+ programming challenges",
@@ -62,7 +55,7 @@ const coreFeatures = [
     title: "The Arena",
     subtitle: "Compete & Connect", 
     description: "Compete with peers in coding competitions and climb the leaderboard.",
-    image: "/mockup.jpeg",
+    image: "/mockup.png",
     color: "from-orange-500 to-red-500",
     highlights: [
       "Weekly competitions",
@@ -81,7 +74,8 @@ const innovationFeatures = [
     Icon: Brain,
     href: "/about",
     cta: "Learn more",
-    className: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3"
+    className: "lg:row-start-1 lg:row-end-4 lg:col-start-2 lg:col-end-3",
+    background: <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-purple-500/20" />
   },
   {
     name: "Real-time Collaboration",
@@ -89,7 +83,8 @@ const innovationFeatures = [
     Icon: Users,
     href: "/about", 
     cta: "Explore",
-    className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3"
+    className: "lg:col-start-1 lg:col-end-2 lg:row-start-1 lg:row-end-3",
+    background: <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-teal-500/20" />
   },
   {
     name: "Advanced Analytics",
@@ -97,7 +92,8 @@ const innovationFeatures = [
     Icon: Target,
     href: "/developers",
     cta: "Discover",
-    className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4"
+    className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4",
+    background: <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-red-500/20" />
   },
   {
     name: "Enterprise Security",
@@ -105,7 +101,8 @@ const innovationFeatures = [
     Icon: Shield,
     href: "/developers",
     cta: "Learn more",
-    className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2"
+    className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2",
+    background: <div className="absolute inset-0 bg-gradient-to-br from-indigo-500/20 to-blue-500/20" />
   },
   {
     name: "Global Community",
@@ -113,7 +110,8 @@ const innovationFeatures = [
     Icon: Globe,
     href: "/about",
     cta: "Join now",
-    className: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4"
+    className: "lg:col-start-3 lg:col-end-3 lg:row-start-2 lg:row-end-4",
+    background: <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-pink-500/20" />
   },
 ];
 

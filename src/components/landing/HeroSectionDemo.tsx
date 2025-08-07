@@ -34,9 +34,9 @@ export function HeroSectionDemo() {
         },
       ]}
       image={{
-        light: "/mockup.jpeg", // Local image from public folder
-        dark: "/mockup.jpeg",  // Same image for both themes
-        alt: "Zemon Platform Dashboard Preview",
+        light: "/mockup.png", // Path relative to the public folder
+        dark: "/mockup.png",
+        alt: "Zemon Platform Preview",
       }}
     />
   )

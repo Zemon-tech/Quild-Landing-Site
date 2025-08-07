@@ -6,7 +6,7 @@ import { useTheme } from "next-themes";
 type TTheme = "system" | "light" | "dark";
 
 export const ThemeSwitcher = () => {
-  const { theme, setTheme, resolvedTheme } = useTheme();
+  const { setTheme, resolvedTheme } = useTheme();
   const [mounted, setMounted] = useState(false);
   
   // Prevent hydration mismatch by only rendering after mount
