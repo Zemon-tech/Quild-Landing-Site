@@ -8,12 +8,14 @@ import { Glow } from "@/components/ui/glow";
 import Image from "next/image";
 import { useTheme } from "next-themes";
 import { cn } from "@/lib/utils";
+import { SignUpButton } from '@clerk/nextjs';
 
 interface HeroAction {
   text: string;
   href: string;
   icon?: React.ReactNode;
   variant?: "default" | "outline" | "glow";
+  isSignUpButton?: boolean;
 }
 
 interface HeroProps {
@@ -79,12 +81,21 @@ export function HeroSectionNew({
           <div className="relative z-10 flex animate-appear justify-center gap-4 opacity-0 delay-300">
             <div className="relative z-10 flex animate-appear justify-center gap-4 opacity-0 delay-300">
               {actions.map((action, index) => (
-                <Button key={index} variant={action.variant} size="lg" asChild>
-                  <a href={action.href} className="flex items-center gap-2">
-                    {action.icon}
-                    {action.text}
-                  </a>
-                </Button>
+                action.isSignUpButton ? (
+                  <SignUpButton key={index} mode="modal">
+                    <Button variant={action.variant} size="lg" className="flex items-center gap-2">
+                      {action.icon}
+                      {action.text}
+                    </Button>
+                  </SignUpButton>
+                ) : (
+                  <Button key={index} variant={action.variant} size="lg" asChild>
+                    <a href={action.href} className="flex items-center gap-2">
+                      {action.icon}
+                      {action.text}
+                    </a>
+                  </Button>
+                )
               ))}
             </div>
           </div>

@@ -159,8 +159,11 @@ export default function PricingPage() {
                   variant={plan.buttonVariant} 
                   className="w-full"
                   size="lg"
+                  asChild
                 >
-                  {plan.buttonText}
+                  <a href="http://localhost:5173">
+                    {plan.buttonText}
+                  </a>
                 </Button>
               </motion.div>
             ))}
@@ -183,8 +186,10 @@ export default function PricingPage() {
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               Are you a university or coding bootcamp? The <strong>Campus Plan</strong> is designed for you. Benefit from all Pro features, plus get custom integrations, an administrative dashboard to track student progress, and dedicated onboarding and training.
             </p>
-            <Button size="lg">
-              Contact Sales to Learn More
+            <Button size="lg" asChild>
+              <a href="http://localhost:5173">
+                Contact Sales to Learn More
+              </a>
             </Button>
           </motion.div>
         </div>

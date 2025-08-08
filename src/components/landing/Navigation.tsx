@@ -9,6 +9,7 @@ import {
 } from 'lucide-react';
 import { SubjectIcon } from '@/components/ui/icons';
 import Link from 'next/link';
+import { useAuth, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs';
 
 const navigationItems = [
   { name: 'Features', href: '#features' },
@@ -20,6 +21,7 @@ const navigationItems = [
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const { isSignedIn, userId } = useAuth();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-lg border-b border-border/20">
@@ -48,12 +50,27 @@ export default function Navigation() {
 
           {/* Desktop CTA Buttons */}
           <div className="hidden md:flex items-center space-x-4">
-            <Button variant="ghost" size="sm">
-              Sign In
-            </Button>
-            <Button size="sm">
-              Get Started
-            </Button>
+            {isSignedIn ? (
+              <>
+                <Button size="sm" asChild>
+                  <a href="http://localhost:5173">Go to App</a>
+                </Button>
+                <UserButton afterSignOutUrl="/" />
+              </>
+            ) : (
+              <>
+                <SignInButton mode="modal">
+                  <Button variant="ghost" size="sm">
+                    Sign In
+                  </Button>
+                </SignInButton>
+                <SignUpButton mode="modal">
+                  <Button size="sm">
+                    Get Started
+                  </Button>
+                </SignUpButton>
+              </>
+            )}
           </div>
 
           {/* Mobile Menu Button */}
@@ -91,12 +108,26 @@ export default function Navigation() {
                   </Link>
                 ))}
                 <div className="pt-4 space-y-3">
-                  <Button variant="ghost" className="w-full justify-start">
-                    Sign In
-                  </Button>
-                  <Button className="w-full">
-                    Get Started
-                  </Button>
+                  {isSignedIn ? (
+                    <>
+                      <Button className="w-full" asChild>
+                        <a href="http://localhost:5173">Go to App</a>
+                      </Button>
+                    </>
+                  ) : (
+                    <>
+                      <SignInButton mode="modal">
+                        <Button variant="ghost" className="w-full justify-start">
+                          Sign In
+                        </Button>
+                      </SignInButton>
+                      <SignUpButton mode="modal">
+                        <Button className="w-full">
+                          Get Started
+                        </Button>
+                      </SignUpButton>
+                    </>
+                  )}
                 </div>
               </div>
             </motion.div>

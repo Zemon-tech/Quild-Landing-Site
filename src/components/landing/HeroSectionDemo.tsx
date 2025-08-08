@@ -2,8 +2,11 @@
 
 import { HeroSectionNew } from "./HeroSectionNew"
 import { Icons } from "@/components/ui/icons"
+import { useAuth, SignUpButton } from '@clerk/nextjs'
 
 export function HeroSectionDemo() {
+  const { isSignedIn } = useAuth();
+
   return (
     <HeroSectionNew
       badge={{
@@ -17,9 +20,10 @@ export function HeroSectionDemo() {
       description="The ultimate platform for college students to learn, build, and showcase their programming skills through real-world projects, coding competitions, and a vibrant community."
       actions={[
         {
-          text: "Get Started for Free",
-          href: "/signup",
+          text: isSignedIn ? "Go to App" : "Get Started for Free",
+          href: isSignedIn ? "http://localhost:5173" : "#",
           variant: "default",
+          isSignUpButton: !isSignedIn,
         },
         {
           text: "Explore Features",

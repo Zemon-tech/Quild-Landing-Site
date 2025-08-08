@@ -250,11 +250,15 @@ export default function AboutPage() {
               Join thousands of students who are already building their future with Zemon.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg">
-                Get Started for Free
+              <Button size="lg" asChild>
+                <a href="http://localhost:5173">
+                  Get Started for Free
+                </a>
               </Button>
-              <Button variant="outline" size="lg">
-                View Our Plans
+              <Button variant="outline" size="lg" asChild>
+                <a href="/pricing">
+                  View Our Plans
+                </a>
               </Button>
             </div>
           </motion.div>
