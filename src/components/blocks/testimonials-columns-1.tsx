@@ -49,7 +49,7 @@ export const TestimonialsColumn = (props: {
 
                   {/* Testimonial Text */}
                   <div className="text-sm leading-relaxed text-muted-foreground mb-6 group-hover:text-foreground transition-colors duration-300">
-                    "{text}"
+                    &ldquo;{text}&rdquo;
                   </div>
 
                   {/* Author Info */}

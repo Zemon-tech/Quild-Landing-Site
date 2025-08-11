@@ -3,19 +3,12 @@
 import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
-import { 
-  BookOpen, 
+import {  
   Brain, 
-  Users, 
-  Code, 
+  Users,
   Target, 
   Sparkles,
   ArrowRight,
-  CheckCircle,
-  Zap,
-  Trophy,
-  Lightbulb,
-  Rocket,
   Shield,
   Globe
 } from 'lucide-react';

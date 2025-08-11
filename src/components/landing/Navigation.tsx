@@ -21,7 +21,7 @@ const navigationItems = [
 
 export default function Navigation() {
   const [isOpen, setIsOpen] = useState(false);
-  const { isSignedIn, userId } = useAuth();
+  const { isSignedIn } = useAuth();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-transparent backdrop-blur-lg border-b border-border/20">

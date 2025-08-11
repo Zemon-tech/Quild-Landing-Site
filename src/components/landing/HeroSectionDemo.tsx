@@ -2,7 +2,6 @@
 
 import { HeroSectionNew } from "./HeroSectionNew"
 import { Icons } from "@/components/ui/icons"
-import mockupLight from './path/to/mockup.png';
 
 export function HeroSectionDemo() {
   return (
