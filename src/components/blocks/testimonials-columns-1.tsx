@@ -1,7 +1,6 @@
 "use client";
 import React from "react";
 import { motion } from "motion/react";
-import Image from "next/image";
 
 interface Testimonial {
   text: string;
@@ -27,7 +26,7 @@ export const TestimonialsColumn = (props: {
           ease: "linear",
           repeatType: "loop",
         }}
-        className="flex flex-col gap-6 pb-6 bg-background items-center"
+        className="flex flex-col items-center gap-6 pb-6 bg-background"
       >
         {[
           ...new Array(2).fill(0).map((_, index) => (
@@ -50,13 +49,13 @@ export const TestimonialsColumn = (props: {
 
                   {/* Testimonial Text */}
                   <div className="text-sm leading-relaxed text-muted-foreground mb-6 group-hover:text-foreground transition-colors duration-300">
-                    &ldquo;{text}&rdquo;
+                    "{text}"
                   </div>
 
                   {/* Author Info */}
                   <div className="flex items-center gap-3">
                     <div className="relative">
-                      <Image
+                      <img
                         width={48}
                         height={48}
                         src={image}

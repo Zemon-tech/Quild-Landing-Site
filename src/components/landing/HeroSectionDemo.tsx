@@ -2,11 +2,9 @@
 
 import { HeroSectionNew } from "./HeroSectionNew"
 import { Icons } from "@/components/ui/icons"
-import { useAuth, SignUpButton } from '@clerk/nextjs'
+import mockupLight from './path/to/mockup.png';
 
 export function HeroSectionDemo() {
-  const { isSignedIn } = useAuth();
-
   return (
     <HeroSectionNew
       badge={{
@@ -20,10 +18,9 @@ export function HeroSectionDemo() {
       description="The ultimate platform for college students to learn, build, and showcase their programming skills through real-world projects, coding competitions, and a vibrant community."
       actions={[
         {
-          text: isSignedIn ? "Go to App" : "Get Started for Free",
-          href: isSignedIn ? "http://localhost:5173" : "#",
+          text: "Get Started for Free",
+          href: "/signup",
           variant: "default",
-          isSignUpButton: !isSignedIn,
         },
         {
           text: "Explore Features",
@@ -38,8 +35,8 @@ export function HeroSectionDemo() {
         },
       ]}
       image={{
-        light: "/mockup.png", // Path relative to the public folder
-        dark: "/mockup.png",
+        light: "/images/mockup.jpeg", // Path relative to the public folder
+        dark: "/images/mockup.jpeg",
         alt: "Zemon Platform Preview",
       }}
     />
