@@ -11,19 +11,19 @@ const journeyFeatures = [
   {
     step: 'Step 1',
     title: 'Create Your Profile',
-    content: 'Set up your developer profile, choose your learning path, and connect with the community. Our AI will personalize your experience based on your goals and current skill level.',
+    content: 'Set up your developer profile in 2 minutes. Choose your learning path, add your college details, and let our AI personalize your experience based on your goals.',
     image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop'
   },
   {
     step: 'Step 2',
     title: 'Learn & Practice',
-    content: 'Dive into The Forge for curated learning resources and The Crucible for hands-on practice with 500+ programming challenges. Track your progress with detailed analytics.',
+    content: 'Access 100+ curated resources in The Forge and solve 500+ real-world problems in The Crucible. Get AI-powered hints and track your progress with detailed analytics.',
     image: 'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=2069&auto=format&fit=crop'
   },
   {
     step: 'Step 3',
     title: 'Compete & Connect',
-    content: 'Join The Arena to participate in coding competitions, collaborate with peers, and showcase your skills. Build your reputation in the developer community.',
+    content: 'Join The Arena with 10K+ students. Participate in weekly competitions, showcase your projects, and connect with mentors who can launch your career.',
     image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop'
   },
   {
@@ -62,7 +62,7 @@ export default function HowItWorksSection() {
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Works</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Your path to becoming a confident, job-ready developer in four transformative steps.
+            Your path to becoming a confident, job-ready developer in four simple steps. Start today, succeed tomorrow.
           </p>
         </motion.div>
 

@@ -7,14 +7,14 @@ export function HeroSectionDemo() {
   return (
     <HeroSectionNew
       badge={{
-        text: "Built for the Builder Within You",
+        text: "Don't just learn, build!",
         action: {
           text: "Learn more",
           href: "#features",
         },
       }}
       title="Built for the Builder Within You"
-      description="The ultimate platform for college students to learn, build, and showcase their programming skills through real-world projects, coding competitions, and a vibrant community."
+      description="Start your developer journey with Quild and become a job-ready developer by learning, building, and competing with a community of over 10,000 students."
       actions={[
         {
           text: "Get Started for Free",
@@ -26,17 +26,11 @@ export function HeroSectionDemo() {
           href: "#features",
           variant: "outline",
         },
-        {
-          text: "GitHub",
-          href: "https://github.com/zemon",
-          variant: "glow",
-          icon: <Icons.gitHub className="h-5 w-5" />,
-        },
       ]}
       image={{
         light: "/images/mockup.jpeg", // Path relative to the public folder
         dark: "/images/mockup.jpeg",
-        alt: "Zemon Platform Preview",
+        alt: "Quild Platform Preview",
       }}
     />
   )

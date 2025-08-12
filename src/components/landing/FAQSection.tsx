@@ -7,29 +7,44 @@ import { Sparkles } from 'lucide-react';
 
 const faqItems = [
   {
-    question: "How do I get started with Zemon?",
-    answer: "Getting started is simple! Create your profile, choose your learning path, and dive into our curated resources. Our AI will personalize your experience based on your goals and current skill level.",
+    question: "How do I get started with Quild?",
+    answer: "Getting started takes just 2 minutes! Create your profile, choose your learning path, and dive into our curated resources. Our AI will personalize everything based on your goals and skill level.",
     category: "Getting Started",
   },
   {
-    question: "What makes Zemon different from other learning platforms?",
-    answer: "Zemon combines learning, practice, and community in one platform. The Forge for learning, The Crucible for practice, and The Arena for competition - creating a complete ecosystem for developer growth.",
+    question: "What makes Quild different from other learning platforms?",
+    answer: "Quild combines learning, practice, and community in one platform. The Forge (100+ resources), The Crucible (500+ problems), and The Arena (10K+ students) create a complete ecosystem that transforms you from a learner to a job-ready developer.",
     category: "Platform",
   },
   {
     question: "Are the programming challenges suitable for beginners?",
-    answer: "Absolutely! We offer challenges for all skill levels, from complete beginners to advanced developers. Our AI adapts the difficulty based on your progress and learning pace.",
+    answer: "Absolutely! We offer challenges for all skill levels - beginner, intermediate, advanced, and expert. Our AI adapts the difficulty based on your progress, and you get personalized hints when stuck.",
     category: "Learning",
   },
   {
     question: "How does the community aspect work?",
-    answer: "Join The Arena to participate in coding competitions, collaborate with peers, and showcase your projects. Connect with mentors and build your professional network.",
+    answer: "Join The Arena to participate in weekly coding competitions, showcase your projects, and connect with mentors. Real-time chat channels let you collaborate with 10K+ students and build your professional network.",
     category: "Community",
   },
   {
     question: "Can I showcase my projects to potential employers?",
-    answer: "Yes! Build an impressive portfolio through our platform and connect directly with employers. Our career services help bridge the gap between learning and professional opportunities.",
+    answer: "Yes! Build an impressive portfolio through our platform and connect directly with employers. Our career services help bridge the gap between learning and professional opportunities. Many students land jobs through Quild.",
     category: "Career",
+  },
+  {
+    question: "What kind of learning resources are available?",
+    answer: "Access 100+ curated resources including articles, videos, courses, books, tools, repositories, and documentation. All content is aligned with college curriculums and includes AI-powered recommendations.",
+    category: "Learning",
+  },
+  {
+    question: "How does the AI assistance work?",
+    answer: "Our AI provides personalized hints for problems, code analysis and feedback, learning path recommendations, and adapts to your progress. It's like having a personal coding mentor available 24/7.",
+    category: "Platform",
+  },
+  {
+    question: "Is there a free plan available?",
+    answer: "Yes! Start with our free plan that gives you access to The Forge, public Crucible problems, and public Arena events. Upgrade to Pro ($9/mo) for unlimited access and AI-powered hints.",
+    category: "Pricing",
   }
 ];
 
@@ -60,7 +75,7 @@ export default function FAQSection() {
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Questions</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Everything you need to know about your journey with Zemon.
+            Everything you need to know about your journey with Quild. Quick answers to get you started.
           </p>
         </motion.div>
 
@@ -77,7 +92,7 @@ export default function FAQSection() {
             items={faqItems}
             contactInfo={{
               title: "Still have questions?",
-              description: "Our support team is here to help you succeed.",
+              description: "Our support team is here to help you succeed. Get in touch and we'll respond within 24 hours.",
               buttonText: "Contact Support",
               onContact: () => console.log("Contact support clicked"),
             }}
