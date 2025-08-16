@@ -10,6 +10,7 @@ import {
 import { SubjectIcon } from '@/components/ui/icons';
 import Link from 'next/link';
 import { useAuth, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs';
+import { config } from '@/lib/config';
 
 const navigationItems = [
   { name: 'Features', href: '#features' },
@@ -52,8 +53,8 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-4">
             {isSignedIn ? (
               <>
-                <Button size="sm" asChild>
-                  <a href="http://localhost:5173">Go to App</a>
+                <Button variant="outline" size="sm" asChild>
+                  <a href={config.mainAppUrl}>Go to App</a>
                 </Button>
                 <UserButton afterSignOutUrl="/" />
               </>
@@ -111,7 +112,7 @@ export default function Navigation() {
                   {isSignedIn ? (
                     <>
                       <Button className="w-full" asChild>
-                        <a href="http://localhost:5173">Go to App</a>
+                        <a href={config.mainAppUrl}>Go to App</a>
                       </Button>
                     </>
                   ) : (

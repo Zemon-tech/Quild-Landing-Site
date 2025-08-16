@@ -1,20 +1,19 @@
-# Clerk Setup for Landing Site
+# Clerk Setup Guide
 
 ## Environment Variables
 
-Create a `.env.local` file in the landing site directory with your Clerk keys:
+Create a `.env.local` file in your project root with the following variables:
 
 ```bash
-# Use the same Clerk keys as your main app
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key_here
-CLERK_SECRET_KEY=your_clerk_secret_key_here
+# Main App URL Configuration
+NEXT_PUBLIC_MAIN_APP_URL=http://localhost:5173
 
-# Clerk URLs
-NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+# Clerk Authentication URLs
 NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=http://localhost:5173
 NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=http://localhost:5173
 ```
+
+**Note**: The Clerk URLs now use the same environment variable as the main app URL for consistency.
 
 ## How It Works
 

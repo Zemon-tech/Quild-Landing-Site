@@ -14,6 +14,7 @@ import {
   Heart,
   Zap
 } from 'lucide-react';
+import { config } from '@/lib/config';
 
 const teamMembers = [
   {
@@ -251,7 +252,7 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <a href="http://localhost:5173">
+                <a href={config.mainAppUrl}>
                   Get Started for Free
                 </a>
               </Button>

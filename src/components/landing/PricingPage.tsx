@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Check, Sparkles, Users} from 'lucide-react';
+import { config } from '@/lib/config';
 
 const pricingPlans = [
   {
@@ -161,7 +162,7 @@ export default function PricingPage() {
                   size="lg"
                   asChild
                 >
-                  <a href="http://localhost:5173">
+                  <a href={config.mainAppUrl}>
                     {plan.buttonText}
                   </a>
                 </Button>
@@ -187,7 +188,7 @@ export default function PricingPage() {
               Are you a university or coding bootcamp? The <strong>Campus Plan</strong> is designed for you. Benefit from all Pro features, plus get custom integrations, an administrative dashboard to track student progress, and dedicated onboarding and training.
             </p>
             <Button size="lg" asChild>
-              <a href="http://localhost:5173">
+              <a href={config.mainAppUrl}>
                 Contact Sales to Learn More
               </a>
             </Button>

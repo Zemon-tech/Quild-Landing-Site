@@ -2,32 +2,17 @@
 
 import { useAuth } from '@clerk/nextjs';
 import { useEffect } from 'react';
+import { config } from '@/lib/config';
 
-interface AuthRedirectProps {
-  children: React.ReactNode;
-}
-
-export function AuthRedirect({ children }: AuthRedirectProps) {
+export default function AuthRedirect() {
   const { isSignedIn, isLoaded } = useAuth();
 
   useEffect(() => {
-    // Only redirect if user is signed in and component is loaded
     if (isLoaded && isSignedIn) {
-      // Redirect to main app
-      window.location.href = 'http://localhost:5173';
+      // Redirect to main app using centralized configuration
+      window.location.href = config.mainAppUrl;
     }
-  }, [isSignedIn, isLoaded]);
+  }, [isLoaded, isSignedIn]);
 
-  // Don't render anything while checking auth status
-  if (!isLoaded) {
-    return null;
-  }
-
-  // If user is signed in, don't render the landing page
-  if (isSignedIn) {
-    return null;
-  }
-
-  // If user is not signed in, show the landing page
-  return <>{children}</>;
+  return null;
 }
