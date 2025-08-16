@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import { motion } from "motion/react";
+import Image from "next/image";
 
 interface Testimonial {
   text: string;
@@ -55,7 +56,7 @@ export const TestimonialsColumn = (props: {
                   {/* Author Info */}
                   <div className="flex items-center gap-3">
                     <div className="relative">
-                      <img
+                      <Image
                         width={48}
                         height={48}
                         src={image}
