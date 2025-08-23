@@ -9,11 +9,12 @@ Create a `.env.local` file in the landing site directory with your Clerk keys:
 NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=your_clerk_publishable_key_here
 CLERK_SECRET_KEY=your_clerk_secret_key_here
 
+# Main App URL
+NEXT_PUBLIC_MAIN_APP_URL=http://localhost:5173
+
 # Clerk URLs
 NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
 NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=http://localhost:5173
-NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=http://localhost:5173
 ```
 
 ## How It Works
@@ -24,14 +25,14 @@ NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=http://localhost:5173
 - "Sign In" button opens Clerk signin modal
 
 ### **Authenticated Users:**
-- Automatically redirected to main app (port 5173)
+- Automatically redirected to main app (using NEXT_PUBLIC_MAIN_APP_URL)
 - See "Go to App" button instead of "Get Started"
 - UserButton shows in navigation
 
 ### **Authentication Flow:**
 1. User clicks "Get Started" → Clerk modal opens
 2. User signs up/signs in → Clerk sets `__session` cookie
-3. User is redirected to main app (port 5173)
+3. User is redirected to main app (using NEXT_PUBLIC_MAIN_APP_URL)
 4. Future visits to `localhost:3000` → Auto-redirect to main app
 
 ## Testing

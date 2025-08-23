@@ -13,8 +13,15 @@ export function AuthRedirect({ children }: AuthRedirectProps) {
   useEffect(() => {
     // Only redirect if user is signed in and component is loaded
     if (isLoaded && isSignedIn) {
-      // Redirect to main app
-      window.location.href = 'http://localhost:5173';
+      // Redirect to main app using environment variable
+      const mainAppUrl = process.env.NEXT_PUBLIC_MAIN_APP_URL;
+      if (mainAppUrl) {
+        window.location.href = mainAppUrl;
+      } else {
+        console.warn('NEXT_PUBLIC_MAIN_APP_URL environment variable is not set');
+        // Fallback to localhost if env var is not set
+        window.location.href = 'http://localhost:5173';
+      }
     }
   }, [isSignedIn, isLoaded]);
 

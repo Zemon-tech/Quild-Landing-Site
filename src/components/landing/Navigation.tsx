@@ -53,7 +53,7 @@ export default function Navigation() {
             {isSignedIn ? (
               <>
                 <Button size="sm" asChild>
-                  <a href="http://localhost:5173">Go to App</a>
+                  <a href={process.env.NEXT_PUBLIC_MAIN_APP_URL || 'http://localhost:5173'}>Go to App</a>
                 </Button>
                 <UserButton afterSignOutUrl="/" />
               </>
@@ -111,7 +111,7 @@ export default function Navigation() {
                   {isSignedIn ? (
                     <>
                       <Button className="w-full" asChild>
-                        <a href="http://localhost:5173">Go to App</a>
+                        <a href={process.env.NEXT_PUBLIC_MAIN_APP_URL || 'http://localhost:5173'}>Go to App</a>
                       </Button>
                     </>
                   ) : (
