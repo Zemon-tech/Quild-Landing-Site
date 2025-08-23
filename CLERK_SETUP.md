@@ -55,10 +55,17 @@ NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
    - Should auto-redirect to main app
    - Because `__session` cookie exists
 
+5. **Test logout synchronization:**
+   - Open main app in one tab
+   - Open landing site in another tab
+   - Logout from main app
+   - Landing site should automatically detect logout and show landing page
+
 ## Benefits
 
 - ✅ **Seamless experience**: Users don't see landing page after login
 - ✅ **Same authentication**: Uses same Clerk account as main app
 - ✅ **Smart routing**: Nginx + Clerk work together
 - ✅ **Industry standard**: Like GitHub, Slack, Notion
+- ✅ **Logout synchronization**: Automatically detects when user logs out from main app
 
