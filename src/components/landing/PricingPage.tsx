@@ -4,7 +4,6 @@ import { motion } from 'framer-motion';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Check, Sparkles, Users} from 'lucide-react';
-import { config } from '@/lib/config';
 
 const pricingPlans = [
   {

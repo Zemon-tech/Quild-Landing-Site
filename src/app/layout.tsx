@@ -3,7 +3,7 @@ import { Inter, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import { ClerkProvider } from '@clerk/nextjs';
-import AuthRedirect from '@/components/AuthRedirect';
+import { AuthRedirect } from '@/components/AuthRedirect';
 
 const inter = Inter({
   variable: "--font-geist-sans",
@@ -141,8 +141,9 @@ export default function RootLayout({
             enableSystem
             disableTransitionOnChange
           >
-            <AuthRedirect />
-            {children}
+            <AuthRedirect>
+              {children}
+            </AuthRedirect>
           </ThemeProvider>
         </ClerkProvider>
       </body>

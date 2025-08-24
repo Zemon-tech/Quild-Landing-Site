@@ -10,7 +10,6 @@ import {
 import { SubjectIcon } from '@/components/ui/icons';
 import Link from 'next/link';
 import { useAuth, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs';
-import { config } from '@/lib/config';
 
 const navigationItems = [
   { name: 'Features', href: '#features' },
