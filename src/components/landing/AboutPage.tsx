@@ -221,8 +221,8 @@ export default function AboutPage() {
                 </a>
               </Button>
               <Button variant="outline" size="lg" asChild>
-                <a href="/pricing">
-                  View Our Plans
+                <a href={process.env.NEXT_PUBLIC_MAIN_APP_URL || 'http://localhost:5173'}>
+                  Explore Our Platform
                 </a>
               </Button>
             </div>
