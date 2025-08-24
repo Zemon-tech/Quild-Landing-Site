@@ -10,7 +10,7 @@ const pricingPlans = [
   {
     name: "Starter",
     price: "Free",
-    description: "Best for getting started and exploring the Zemon ecosystem.",
+            description: "Best for getting started and exploring the Quild ecosystem.",
     features: [
       "Access to The Forge",
       "Solve public Crucible problems", 
@@ -95,7 +95,7 @@ export default function PricingPage() {
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Fuel Your Future.</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Choose the plan that&apos;s right for your journey. Whether you&apos;re just starting out or ready to go pro, Zemon has a path for you. All our plans are designed to help you learn, build, and showcase your skills.
+              Choose the plan that&apos;s right for your journey. Whether you&apos;re just starting out or ready to go pro, Quild has a path for you. All our plans are designed to help you learn, build, and showcase your skills.
             </p>
           </motion.div>
         </div>
@@ -162,7 +162,7 @@ export default function PricingPage() {
                   size="lg"
                   asChild
                 >
-                  <a href={config.mainAppUrl}>
+                  <a href={process.env.NEXT_PUBLIC_MAIN_APP_URL || 'http://localhost:5173'}>
                     {plan.buttonText}
                   </a>
                 </Button>
@@ -188,7 +188,7 @@ export default function PricingPage() {
               Are you a university or coding bootcamp? The <strong>Campus Plan</strong> is designed for you. Benefit from all Pro features, plus get custom integrations, an administrative dashboard to track student progress, and dedicated onboarding and training.
             </p>
             <Button size="lg" asChild>
-              <a href={config.mainAppUrl}>
+              <a href={process.env.NEXT_PUBLIC_MAIN_APP_URL || 'http://localhost:5173'}>
                 Contact Sales to Learn More
               </a>
             </Button>

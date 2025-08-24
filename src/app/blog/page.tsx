@@ -1,4 +1,27 @@
+import type { Metadata } from 'next';
 import Navigation from '@/components/landing/Navigation';
+
+export const metadata: Metadata = {
+  title: "Quild Blog - Programming Tutorials, Tips & Industry Insights",
+  description: "Stay updated with the latest programming tutorials, coding tips, industry insights, and Quild platform updates. Learn from expert developers and improve your coding skills.",
+  keywords: [
+    "programming blog", "coding tutorials", "programming tips", 
+    "coding insights", "programming education blog", "Quild blog", 
+    "coding tutorials", "programming news", "developer blog"
+  ],
+  openGraph: {
+    title: "Quild Blog - Programming Tutorials, Tips & Industry Insights",
+    description: "Stay updated with the latest programming tutorials, coding tips, industry insights, and Quild platform updates.",
+    url: 'https://quild.in/blog',
+  },
+  twitter: {
+    title: "Quild Blog - Programming Tutorials, Tips & Industry Insights",
+    description: "Stay updated with the latest programming tutorials, coding tips, and industry insights.",
+  },
+  alternates: {
+    canonical: 'https://quild.in/blog',
+  },
+};
 
 export default function BlogPage() {
   return (
@@ -13,7 +36,7 @@ export default function BlogPage() {
               </span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Coming soon! We&apos;re working on bringing you the latest insights, tutorials, and updates from the Zemon team.
+              Coming soon! We&apos;re working on bringing you the latest insights, tutorials, and updates from the Quild team.
             </p>
           </div>
         </div>

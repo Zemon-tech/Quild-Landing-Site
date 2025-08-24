@@ -53,8 +53,8 @@ export default function Navigation() {
           <div className="hidden md:flex items-center space-x-4">
             {isSignedIn ? (
               <>
-                <Button variant="outline" size="sm" asChild>
-                  <a href={config.mainAppUrl}>Go to App</a>
+                <Button size="sm" asChild>
+                  <a href={process.env.NEXT_PUBLIC_MAIN_APP_URL || 'http://localhost:5173'}>Go to App</a>
                 </Button>
                 <UserButton afterSignOutUrl="/" />
               </>
@@ -112,7 +112,7 @@ export default function Navigation() {
                   {isSignedIn ? (
                     <>
                       <Button className="w-full" asChild>
-                        <a href={config.mainAppUrl}>Go to App</a>
+                        <a href={process.env.NEXT_PUBLIC_MAIN_APP_URL || 'http://localhost:5173'}>Go to App</a>
                       </Button>
                     </>
                   ) : (
