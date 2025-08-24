@@ -9,7 +9,7 @@ const pricingPlans = [
   {
     name: "Starter",
     price: "Free",
-    description: "Best for getting started and exploring the Zemon ecosystem.",
+            description: "Best for getting started and exploring the Quild ecosystem.",
     features: [
       "Access to The Forge",
       "Solve public Crucible problems", 
@@ -94,7 +94,7 @@ export default function PricingPage() {
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Fuel Your Future.</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Choose the plan that&apos;s right for your journey. Whether you&apos;re just starting out or ready to go pro, Zemon has a path for you. All our plans are designed to help you learn, build, and showcase your skills.
+              Choose the plan that&apos;s right for your journey. Whether you&apos;re just starting out or ready to go pro, Quild has a path for you. All our plans are designed to help you learn, build, and showcase your skills.
             </p>
           </motion.div>
         </div>

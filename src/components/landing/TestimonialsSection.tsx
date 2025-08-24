@@ -8,7 +8,7 @@ import { Sparkles, Users } from 'lucide-react';
 
 const testimonials = [
   {
-    text: "Zemon transformed my learning journey. The combination of challenges and community support helped me land my dream job at a top tech company.",
+            text: "Quild transformed my learning journey. The combination of challenges and community support helped me land my dream job at a top tech company.",
     image: "https://images.unsplash.com/photo-1494790108755-2616b612b786?q=80&w=300&auto=format&fit=crop",
     name: "Sarah Chen",
     role: "Software Engineer at Google"
@@ -123,7 +123,7 @@ export default function TestimonialsSection() {
             <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Worldwide</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-            Join thousands of students from top universities who have transformed their careers with Zemon.
+            Join thousands of students from top universities who have transformed their careers with Quild.
           </p>
         </motion.div>
 
@@ -158,7 +158,7 @@ export default function TestimonialsSection() {
               What Our <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Students Say</span>
             </h3>
             <p className="text-muted-foreground max-w-2xl mx-auto">
-              Real stories from students who have transformed their careers with Zemon
+              Real stories from students who have transformed their careers with Quild
             </p>
           </div>
 

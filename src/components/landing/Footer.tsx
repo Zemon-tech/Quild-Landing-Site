@@ -37,9 +37,9 @@ const footerLinks = {
 };
 
 const socialLinks = [
-  { name: 'GitHub', icon: Github, href: 'https://github.com/zemon' },
-  { name: 'Discord', icon: MessageCircle, href: 'https://discord.gg/zemon' },
-  { name: 'Email', icon: Mail, href: 'mailto:hello@zemon.com' }
+          { name: 'GitHub', icon: Github, href: 'https://github.com/quild' },
+        { name: 'Discord', icon: MessageCircle, href: 'https://discord.gg/quild' },
+        { name: 'Email', icon: Mail, href: 'mailto:hello@quild.com' }
 ];
 
 export default function Footer() {
@@ -151,7 +151,7 @@ export default function Footer() {
         {/* Bottom Footer */}
         <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
           <div className="text-sm text-muted-foreground">
-            © 2025 Zemon. All rights reserved.
+            © 2025 Quild. All rights reserved.
           </div>
           
           <div className="flex items-center space-x-6">

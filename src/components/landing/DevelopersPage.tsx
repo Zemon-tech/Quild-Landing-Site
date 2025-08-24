@@ -51,7 +51,7 @@ const apiEndpoints = [
 const developerTools = [
   {
     name: "Open Source SDKs",
-    description: "Use our official open-source SDKs to easily connect your application with the Zemon API. We provide everything you need to start building right away.",
+            description: "Use our official open-source SDKs to easily connect your application with the Quild API. We provide everything you need to start building right away.",
     icon: Github,
     buttonText: "Explore SDKs on GitHub",
     buttonIcon: ExternalLink
@@ -70,14 +70,14 @@ const communityLinks = [
     name: "GitHub",
     description: "Find all our open-source projects, contribute to our SDKs, and report issues.",
     icon: Github,
-    href: "https://github.com/zemon",
-    buttonText: "Zemon on GitHub"
+            href: "https://github.com/quild",
+        buttonText: "Quild on GitHub"
   },
   {
     name: "Discord",
-    description: "Join our official Discord server to chat in real-time with our community of builders and the Zemon team.",
+    description: "Join our official Discord server to chat in real-time with our community of builders and the Quild team.",
     icon: MessageCircle,
-    href: "https://discord.gg/zemon",
+    href: "https://discord.gg/quild",
     buttonText: "Join our Discord"
   }
 ];
@@ -99,10 +99,10 @@ export default function DevelopersPage() {
             </Badge>
             <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
               Build with
-              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Zemon</span>
+              <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Quild</span>
             </h1>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-              Integrate your applications, automate your workflows, and extend the power of the Zemon ecosystem. We provide the tools and resources you need to build on top of our platform.
+              Integrate your applications, automate your workflows, and extend the power of the Quild ecosystem. We provide the tools and resources you need to build on top of our platform.
             </p>
           </motion.div>
         </div>
@@ -119,7 +119,7 @@ export default function DevelopersPage() {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">API Access & Endpoints</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Access a rich set of API endpoints to programmatically interact with the Zemon platform. Our API allows you to manage and retrieve data across our core ecosystem.
+              Access a rich set of API endpoints to programmatically interact with the Quild platform. Our API allows you to manage and retrieve data across our core ecosystem.
             </p>
           </motion.div>
 
@@ -209,7 +209,7 @@ export default function DevelopersPage() {
           >
             <h2 className="text-3xl md:text-4xl font-bold mb-4">Join the Developer Community</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Connect with other developers building on Zemon. Ask questions, share what you&apos;re building, and get support from our team and the community.
+              Connect with other developers building on Quild. Ask questions, share what you&apos;re building, and get support from our team and the community.
             </p>
           </motion.div>
 
@@ -253,7 +253,7 @@ export default function DevelopersPage() {
               Ready to Start Building?
             </h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Get your API keys and start integrating with the Zemon platform today.
+              Get your API keys and start integrating with the Quild platform today.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" className="gap-2">

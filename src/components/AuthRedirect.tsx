@@ -29,24 +29,30 @@ export function AuthRedirect({ children }: AuthRedirectProps) {
   // Set up session monitoring to detect logout from main app
   useEffect(() => {
     if (isLoaded && isSignedIn) {
-      // Immediate check for session cookie
-      const hasSessionCookie = document.cookie.includes('__session');
-      if (!hasSessionCookie) {
-        // Session cookie was cleared (user logged out from main app)
-        window.location.reload();
-        return;
-      }
-
-      // Check session status every 3 seconds when user is signed in
-      sessionCheckInterval.current = setInterval(() => {
-        // Check if the Clerk session cookie still exists
-        const hasSessionCookie = document.cookie.includes('__session');
-        if (!hasSessionCookie) {
-          // Session cookie was cleared (user logged out from main app)
-          // Force a page reload to update the auth state
-          window.location.reload();
+      // For production: Use Clerk's built-in session validation
+      // This is more reliable than cookie checking across domains
+      const validateSession = async () => {
+        try {
+          // Check if the current session is still valid
+          const response = await fetch('/api/auth/validate-session', {
+            method: 'GET',
+            credentials: 'include',
+          });
+          
+          if (!response.ok) {
+            // Session is invalid, reload to update auth state
+            window.location.reload();
+          }
+        } catch (error) {
+          console.warn('Session validation failed:', error);
         }
-      }, 3000);
+      };
+
+      // Immediate validation
+      validateSession();
+
+      // Set up periodic validation every 10 seconds
+      sessionCheckInterval.current = setInterval(validateSession, 10000);
     }
 
     // Cleanup interval when component unmounts or auth state changes
@@ -60,26 +66,26 @@ export function AuthRedirect({ children }: AuthRedirectProps) {
 
   // Listen for storage events (when logout happens in another tab/window)
   useEffect(() => {
-    const handleStorageChange = (e: StorageEvent) => {
-      if (e.key === '__clerk_session' && !e.newValue && isSignedIn) {
-        // Clerk session was cleared in another tab/window
-        window.location.reload();
+    // For production: Listen for Clerk's built-in events
+    const handleClerkEvent = (event: CustomEvent) => {
+      if (event.type === 'clerk:user:updated' || event.type === 'clerk:session:updated') {
+        // User or session was updated, check if still authenticated
+        if (isSignedIn) {
+          // Trigger a session validation
+          setTimeout(() => {
+            window.location.reload();
+          }, 1000);
+        }
       }
     };
 
-    // Also listen for custom logout events
-    const handleLogoutEvent = () => {
-      if (isSignedIn) {
-        window.location.reload();
-      }
-    };
-
-    window.addEventListener('storage', handleStorageChange);
-    window.addEventListener('clerk:logout', handleLogoutEvent);
+    // Listen for Clerk events
+    window.addEventListener('clerk:user:updated', handleClerkEvent as EventListener);
+    window.addEventListener('clerk:session:updated', handleClerkEvent as EventListener);
     
     return () => {
-      window.removeEventListener('storage', handleStorageChange);
-      window.removeEventListener('clerk:logout', handleLogoutEvent);
+      window.removeEventListener('clerk:user:updated', handleClerkEvent as EventListener);
+      window.removeEventListener('clerk:session:updated', handleClerkEvent as EventListener);
     };
   }, [isSignedIn]);
 
