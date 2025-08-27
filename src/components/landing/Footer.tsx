@@ -13,7 +13,6 @@ import { SubjectIcon } from '@/components/ui/icons';
 const footerLinks = {
   product: [
     { name: 'Features', href: '#features' },
-    { name: 'Pricing', href: '#pricing' },
     { name: 'API', href: '#api' },
     { name: 'Documentation', href: '#docs' }
   ],

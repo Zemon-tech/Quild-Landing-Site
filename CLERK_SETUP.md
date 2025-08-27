@@ -1,4 +1,4 @@
-# Clerk Setup for Landing Site
+# Clerk Setup Guide
 
 ## Environment Variables
 
@@ -33,6 +33,8 @@ NEXT_PUBLIC_MAIN_APP_URL=https://your-main-app-domain.com
 NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
 NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
 ```
+
+**Note**: The Clerk URLs now use the same environment variable as the main app URL for consistency.
 
 ## How It Works
 

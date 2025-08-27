@@ -12,7 +12,6 @@ export function AuthRedirect({ children }: AuthRedirectProps) {
   const sessionCheckInterval = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    // Only redirect if user is signed in and component is loaded
     if (isLoaded && isSignedIn) {
       // Redirect to main app using environment variable
       const mainAppUrl = process.env.NEXT_PUBLIC_MAIN_APP_URL;

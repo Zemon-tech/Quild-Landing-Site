@@ -102,7 +102,7 @@ const innovationFeatures = [
     name: "Advanced Analytics",
     description: "Track your progress with detailed insights, skill development metrics, and performance analytics.",
     Icon: Target,
-    href: "/developers",
+    href: "#features",
     cta: "Discover",
     className: "lg:col-start-1 lg:col-end-2 lg:row-start-3 lg:row-end-4"
   },
@@ -110,7 +110,7 @@ const innovationFeatures = [
     name: "Enterprise Security",
     description: "Built with enterprise-grade security, privacy protection, and role-based access control.",
     Icon: Shield,
-    href: "/developers",
+    href: "#features",
     cta: "Learn more",
     className: "lg:col-start-3 lg:col-end-3 lg:row-start-1 lg:row-end-2"
   },

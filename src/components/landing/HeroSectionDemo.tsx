@@ -1,7 +1,6 @@
 "use client"
 
 import { HeroSectionNew } from "./HeroSectionNew"
-import { Icons } from "@/components/ui/icons"
 
 export function HeroSectionDemo() {
   return (

@@ -296,7 +296,7 @@ export default function InteractiveFeaturesModal({
                       muted
                       loop
                       playsInline
-                      onError={(e) => {
+                      onError={() => {
                         console.warn('Video failed to load:', currentFeature.video);
                       }}
                     />
@@ -309,7 +309,7 @@ export default function InteractiveFeaturesModal({
                       className="w-auto h-auto max-w-full max-h-full object-cover rounded-2xl"
                       style={{ objectPosition: 'center center' }}
                       priority
-                      onError={(e) => {
+                      onError={() => {
                         console.warn('Image failed to load:', currentFeature?.image);
                       }}
                     />
