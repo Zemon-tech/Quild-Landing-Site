@@ -178,7 +178,7 @@ export default function CareersPageClient() {
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-card rounded-xl p-8 border border-border/50 hover:shadow-lg transition-shadow text-center"
                 >
                   <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
@@ -213,7 +213,7 @@ export default function CareersPageClient() {
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-card rounded-xl p-8 border border-border/50"
                 >
                   <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
@@ -245,7 +245,7 @@ export default function CareersPageClient() {
                   key={index}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
+                  transition={{ duration: 0.8, delay: index * 0.1 }}
                   className="bg-card rounded-xl p-8 border border-border/50 hover:shadow-lg transition-shadow"
                 >
                   <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">

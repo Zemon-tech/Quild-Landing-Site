@@ -17,8 +17,9 @@ export function HeroSectionDemo() {
       actions={[
         {
           text: "Get Started for Free",
-          href: "/signup",
+          href: "#",
           variant: "default",
+          isSignUpButton: true,
         },
         {
           text: "Explore Features",

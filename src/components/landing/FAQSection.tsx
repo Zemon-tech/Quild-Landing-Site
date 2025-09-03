@@ -94,7 +94,7 @@ export default function FAQSection() {
               title: "Still have questions?",
               description: "Our support team is here to help you succeed. Get in touch and we'll respond within 24 hours.",
               buttonText: "Contact Support",
-              onContact: () => console.log("Contact support clicked"),
+              onContact: () => window.location.href = "/support",
             }}
           />
         </motion.div>

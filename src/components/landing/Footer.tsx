@@ -12,13 +12,10 @@ import { SubjectIcon } from '@/components/ui/icons';
 
 const footerLinks = {
   product: [
-    { name: 'Features', href: '#features' },
-    { name: 'API', href: '#api' },
-    { name: 'Documentation', href: '#docs' }
+    { name: 'Features', href: '#features' }
   ],
   company: [
     { name: 'About', href: '/about' },
-    { name: 'Blog', href: '/blog' },
     { name: 'Careers', href: '/careers' },
     { name: 'Contact', href: '/contact' }
   ],
@@ -29,8 +26,6 @@ const footerLinks = {
   ],
   legal: [
     { name: 'Privacy Policy', href: '/privacy' },
-    { name: 'Terms of Service', href: '/terms' },
-    { name: 'Cookie Policy', href: '/cookies' },
     { name: 'GDPR', href: '/gdpr' }
   ]
 };

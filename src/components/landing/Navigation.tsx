@@ -13,8 +13,7 @@ import { useAuth, SignInButton, SignUpButton, UserButton } from '@clerk/nextjs';
 
 const navigationItems = [
   { name: 'Features', href: '#features' },
-  { name: 'About', href: '/about' },
-  { name: 'Blog', href: '/blog' }
+  { name: 'About', href: '/about' }
 ];
 
 export default function Navigation() {
