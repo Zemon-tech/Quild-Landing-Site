@@ -5,99 +5,127 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { 
   Sparkles, 
-  Users, 
+  Users,
+  Code,
   Heart,
-  Zap,
-  Globe,
-  BookOpen,
-  Trophy
+  MapPin,
+  Clock,
+  ExternalLink,
+  CheckCircle,
+  Star,
+  Briefcase,
+  GraduationCap,
+  Lightbulb
 } from 'lucide-react';
 
 const openPositions = [
   {
-    title: "Senior Frontend Engineer",
+    title: "Senior Full-Stack Engineer",
     department: "Engineering",
-    location: "Remote",
+    location: "Remote / San Francisco",
     type: "Full-time",
-    description: "Join our team to build the next generation of learning experiences. You'll work on React, TypeScript, and modern web technologies.",
+    experience: "5+ years",
+    description: "Build the core platform that helps students learn programming through interactive challenges and AI-powered guidance.",
     requirements: [
-      "5+ years of experience with React/TypeScript",
-      "Experience with modern web technologies",
-      "Passion for education and learning",
-      "Strong communication skills"
-    ]
-  },
-  {
-    title: "Backend Engineer",
-    department: "Engineering", 
-    location: "Remote",
-    type: "Full-time",
-    description: "Build scalable APIs and services that power our learning platform. Work with Node.js, Python, and cloud technologies.",
-    requirements: [
-      "3+ years of backend development experience",
-      "Experience with Node.js or Python",
-      "Knowledge of database design",
-      "Experience with cloud platforms"
+      "5+ years of full-stack development experience",
+      "Expertise in React, Node.js, and TypeScript",
+      "Experience with AI/ML integration",
+      "Strong problem-solving and communication skills"
     ]
   },
   {
     title: "Product Designer",
     department: "Design",
-    location: "Remote", 
+    location: "Remote / San Francisco",
     type: "Full-time",
-    description: "Create beautiful, intuitive user experiences that help students learn and grow. Work on user research, wireframes, and prototypes.",
+    experience: "3+ years",
+    description: "Design intuitive and engaging user experiences that make learning programming accessible and fun for students.",
     requirements: [
       "3+ years of product design experience",
-      "Strong portfolio showcasing UX/UI work",
+      "Strong portfolio showcasing UX/UI design",
       "Experience with Figma and design systems",
-      "Passion for education technology"
+      "Understanding of educational technology"
     ]
   },
   {
-    title: "Community Manager",
-    department: "Community",
+    title: "Content Creator & Educator",
+    department: "Education",
     location: "Remote",
-    type: "Full-time", 
-    description: "Build and nurture our community of learners and developers. Organize events, manage social media, and create engaging content.",
+    type: "Full-time",
+    experience: "2+ years",
+    description: "Create high-quality programming tutorials, challenges, and educational content that helps students succeed.",
     requirements: [
-      "2+ years of community management experience",
-      "Excellent communication skills",
-      "Experience with social media platforms",
-      "Passion for developer communities"
+      "2+ years of teaching or content creation experience",
+      "Strong programming background",
+      "Excellent written and verbal communication",
+      "Experience with video production preferred"
+    ]
+  },
+  {
+    title: "DevOps Engineer",
+    department: "Engineering",
+    location: "Remote / San Francisco",
+    type: "Full-time",
+    experience: "4+ years",
+    description: "Scale our infrastructure to support thousands of students learning and competing simultaneously.",
+    requirements: [
+      "4+ years of DevOps/Infrastructure experience",
+      "Expertise in AWS, Docker, and Kubernetes",
+      "Experience with CI/CD pipelines",
+      "Strong monitoring and security practices"
     ]
   }
 ];
 
 const benefits = [
   {
-    icon: Globe,
-    title: "Remote First",
-    description: "Work from anywhere in the world with our distributed team."
-  },
-  {
     icon: Heart,
     title: "Health & Wellness",
-    description: "Comprehensive health insurance and wellness programs."
+    description: "Comprehensive health, dental, and vision coverage for you and your family."
   },
   {
-    icon: BookOpen,
-    title: "Learning Budget",
-    description: "Annual budget for courses, conferences, and professional development."
+    icon: GraduationCap,
+    title: "Learning & Development",
+    description: "Annual learning budget and time off for conferences, courses, and skill development."
   },
   {
-    icon: Trophy,
-    title: "Competitive Salary",
-    description: "Competitive compensation with equity options."
+    icon: MapPin,
+    title: "Flexible Work",
+    description: "Work from anywhere with flexible hours and unlimited PTO."
+  },
+  {
+    icon: Star,
+    title: "Equity & Growth",
+    description: "Competitive equity package and opportunities for rapid career growth."
   },
   {
     icon: Users,
-    title: "Great Team",
-    description: "Work with passionate people who care about education."
+    title: "Team & Culture",
+    description: "Join a diverse, inclusive team that values collaboration and innovation."
   },
   {
-    icon: Zap,
-    title: "Flexible Hours",
-    description: "Flexible working hours to fit your lifestyle."
+    icon: Lightbulb,
+    title: "Impact",
+    description: "Make a real difference in democratizing programming education worldwide."
+  }
+];
+
+const values = [
+  {
+    title: "Student-First",
+    description: "Everything we do is designed to help students succeed in their programming journey."
+  },
+  {
+    title: "Innovation",
+    description: "We embrace new technologies and creative solutions to solve complex problems."
+  },
+  {
+    title: "Collaboration",
+    description: "We believe the best solutions come from diverse teams working together."
+  },
+  {
+    title: "Growth",
+    description: "We're committed to continuous learning and improvement, both personally and professionally."
   }
 ];
 
@@ -120,17 +148,17 @@ export default function CareersPageClient() {
               </Badge>
               <h1 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
                 Build the Future of
-                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Learning</span>
+                <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Programming Education</span>
               </h1>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
-                Join our mission to democratize access to quality programming education. We&apos;re building the ultimate platform for college students to learn, build, and showcase their skills.
+                Join our mission to democratize programming education. We&apos;re building the ultimate learning platform that helps students master coding through interactive challenges, AI-powered guidance, and community support.
               </p>
             </motion.div>
           </div>
         </section>
 
-        {/* Benefits Section */}
-        <section className="py-16 px-4 bg-muted/20">
+        {/* Why Join Us */}
+        <section className="py-16 px-4">
           <div className="max-w-6xl mx-auto">
             <motion.div
               initial={{ opacity: 0, y: 30 }}
@@ -138,9 +166,9 @@ export default function CareersPageClient() {
               transition={{ duration: 0.8 }}
               className="text-center mb-12"
             >
-              <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Work at Quild?</h2>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Why Join Quild?</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                We believe in creating an environment where you can do your best work and grow your career.
+                Be part of a team that&apos;s transforming how students learn programming.
               </p>
             </motion.div>
 
@@ -151,15 +179,45 @@ export default function CareersPageClient() {
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
-                  className="bg-card rounded-xl p-6 border border-border/50 hover:shadow-lg transition-shadow"
+                  className="bg-card rounded-xl p-8 border border-border/50 hover:shadow-lg transition-shadow text-center"
                 >
-                  <div className="flex items-center mb-4">
-                    <benefit.icon className="w-6 h-6 text-primary mr-3" />
-                    <h3 className="text-lg font-semibold">{benefit.title}</h3>
+                  <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                    <benefit.icon className="w-8 h-8 text-primary" />
                   </div>
-                  <p className="text-muted-foreground leading-relaxed">
-                    {benefit.description}
-                  </p>
+                  <h3 className="text-xl font-semibold mb-3">{benefit.title}</h3>
+                  <p className="text-muted-foreground">{benefit.description}</p>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Our Values */}
+        <section className="py-16 px-4 bg-muted/20">
+          <div className="max-w-6xl mx-auto">
+            <motion.div
+              initial={{ opacity: 0, y: 30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              className="text-center mb-12"
+            >
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">Our Values</h2>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+                The principles that guide everything we do.
+              </p>
+            </motion.div>
+
+            <div className="grid md:grid-cols-2 gap-8">
+              {values.map((value, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
+                  className="bg-card rounded-xl p-8 border border-border/50"
+                >
+                  <h3 className="text-xl font-semibold mb-3">{value.title}</h3>
+                  <p className="text-muted-foreground">{value.description}</p>
                 </motion.div>
               ))}
             </div>
@@ -177,11 +235,11 @@ export default function CareersPageClient() {
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-4">Open Positions</h2>
               <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-                Join our team and help us build the future of programming education.
+                Join our growing team and help us build the future of programming education.
               </p>
             </motion.div>
 
-            <div className="space-y-6">
+            <div className="space-y-8">
               {openPositions.map((position, index) => (
                 <motion.div
                   key={index}
@@ -190,27 +248,42 @@ export default function CareersPageClient() {
                   transition={{ duration: 0.8, delay: 0.2 + index * 0.1 }}
                   className="bg-card rounded-xl p-8 border border-border/50 hover:shadow-lg transition-shadow"
                 >
-                  <div className="flex flex-col md:flex-row md:items-center md:justify-between mb-6">
-                    <div>
-                      <h3 className="text-xl font-semibold mb-2">{position.title}</h3>
-                      <div className="flex flex-wrap gap-2">
+                  <div className="flex flex-col md:flex-row md:items-start md:justify-between mb-6">
+                    <div className="flex-1">
+                      <div className="flex items-center gap-3 mb-3">
+                        <Briefcase className="w-5 h-5 text-primary" />
                         <Badge variant="secondary">{position.department}</Badge>
-                        <Badge variant="outline">{position.location}</Badge>
-                        <Badge variant="outline">{position.type}</Badge>
                       </div>
+                      <h3 className="text-2xl font-semibold mb-2">{position.title}</h3>
+                      <div className="flex flex-wrap items-center gap-4 text-sm text-muted-foreground mb-4">
+                        <div className="flex items-center">
+                          <MapPin className="w-4 h-4 mr-1" />
+                          {position.location}
+                        </div>
+                        <div className="flex items-center">
+                          <Clock className="w-4 h-4 mr-1" />
+                          {position.type}
+                        </div>
+                        <div className="flex items-center">
+                          <Users className="w-4 h-4 mr-1" />
+                          {position.experience}
+                        </div>
+                      </div>
+                      <p className="text-muted-foreground mb-4">{position.description}</p>
                     </div>
-                    <Button className="mt-4 md:mt-0">
+                    <Button className="gap-2 md:ml-6">
                       Apply Now
+                      <ExternalLink className="w-4 h-4" />
                     </Button>
                   </div>
-                  <p className="text-muted-foreground mb-6">{position.description}</p>
+                  
                   <div>
-                    <h4 className="font-semibold mb-3">Requirements:</h4>
+                    <h4 className="font-semibold mb-3">Key Requirements:</h4>
                     <ul className="space-y-2">
-                      {position.requirements.map((req, reqIndex) => (
-                        <li key={reqIndex} className="flex items-start text-sm text-muted-foreground">
-                          <span className="w-1.5 h-1.5 bg-primary rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                          {req}
+                      {position.requirements.map((requirement, reqIndex) => (
+                        <li key={reqIndex} className="flex items-start">
+                          <CheckCircle className="w-4 h-4 text-green-500 mr-2 mt-0.5 flex-shrink-0" />
+                          <span className="text-sm text-muted-foreground">{requirement}</span>
                         </li>
                       ))}
                     </ul>
@@ -230,14 +303,21 @@ export default function CareersPageClient() {
               transition={{ duration: 0.8 }}
             >
               <h2 className="text-3xl md:text-4xl font-bold mb-6">
-                Don&apos;t See the Right Role?
+                Don&apos;t See Your Role?
               </h2>
               <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-                We&apos;re always looking for talented people to join our team. Send us your resume and we&apos;ll keep you in mind for future opportunities.
+                We&apos;re always looking for talented individuals who share our passion for education and technology. Send us your resume and let&apos;s talk!
               </p>
-              <Button size="lg">
-                Send Your Resume
-              </Button>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button size="lg" className="gap-2">
+                  <Code className="w-5 h-5" />
+                  Send Your Resume
+                </Button>
+                <Button variant="outline" size="lg" className="gap-2">
+                  <Users className="w-5 h-5" />
+                  Learn About Our Culture
+                </Button>
+              </div>
             </motion.div>
           </div>
         </section>
@@ -245,5 +325,3 @@ export default function CareersPageClient() {
     </>
   );
 }
-
-
