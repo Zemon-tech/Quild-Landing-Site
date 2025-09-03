@@ -77,11 +77,7 @@ export const metadata: Metadata = {
     google: 'your-google-verification-code', // Add your Google Search Console verification code
   },
   icons: {
-    icon: '/favicon.ico',
-    shortcut: '/favicon.ico',
-    other: [
-      { rel: 'icon', url: '/icon.svg', type: 'image/svg+xml' },
-    ],
+    icon: '/favicon.svg',
   },
   category: 'education',
   classification: 'programming education platform',
