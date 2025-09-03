@@ -21,7 +21,7 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'Yandex', allow: '/' },
       { userAgent: 'baiduspider', allow: '/' },
     ],
-    sitemap: 'https://quild.in/sitemap.xml',
-    host: 'https://quild.in',
+    sitemap: 'https://www.quild.in/sitemap.xml',
+    host: 'https://www.quild.in',
   }
 }
