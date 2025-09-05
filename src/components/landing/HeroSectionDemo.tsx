@@ -1,37 +1,49 @@
-"use client"
-
+import { Space_Mono } from "next/font/google"
 import { HeroSectionNew } from "./HeroSectionNew"
+
+const spaceMono = Space_Mono({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+})
 
 export function HeroSectionDemo() {
   return (
-    <HeroSectionNew
-      badge={{
-        text: "Don't just learn, build!",
-        action: {
-          text: "Learn more",
-          href: "#features",
-        },
-      }}
-      title="Built for the Builder Within You"
-      description="Start your developer journey with Quild and become a job-ready developer by learning, building, and competing with a community of over 10,000 students."
-      actions={[
-        {
-          text: "Get Started for Free",
-          href: "#",
-          variant: "default",
-          isSignUpButton: true,
-        },
-        {
-          text: "Explore Features",
-          href: "#features",
-          variant: "outline",
-        },
-      ]}
-      image={{
-        light: "/images/mockup.jpeg", // Path relative to the public folder
-        dark: "/images/mockup.jpeg",
-        alt: "Quild Platform Preview",
-      }}
-    />
+    <div className={spaceMono.className}>
+      <HeroSectionNew
+        badge={{
+          text: "Don't just learn, build!",
+          action: {
+            text: "Learn more",
+            href: "#features",
+          },
+        }}
+        title={
+          <>
+            <span className="block max-w-[22ch] mx-auto">
+            Master the Skills That AI Can't Replace
+            </span>
+          </>
+        }
+        description="Quilld is where you'll solve the real-world problems that define a true engineer—from system design to large-scale architecture."
+        actions={[
+          {
+            text: "Get Started for Free",
+            href: "#",
+            variant: "default",
+            isSignUpButton: true,
+          },
+          {
+            text: "Explore Features",
+            href: "#features",
+            variant: "outline",
+          },
+        ]}
+        image={{
+          light: "/images/mockup.jpeg", // Path relative to the public folder
+          dark: "/images/mockup.jpeg",
+          alt: "Quild Platform Preview",
+        }}
+      />
+    </div>
   )
-}  
+}

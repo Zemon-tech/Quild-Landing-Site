@@ -11,7 +11,7 @@ import Footer from '@/components/landing/Footer';
 
 export default function Home() {
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen font-space-mono">
       <Navigation />
       <HeroSectionDemo />
       <EcosystemSection />

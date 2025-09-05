@@ -26,7 +26,7 @@ interface HeroProps {
       href: string;
     };
   };
-  title: string;
+  title: React.ReactNode;
   description: string;
   actions: HeroAction[];
   image: {
@@ -68,7 +68,7 @@ export function HeroSectionNew({
           )}
 
           {/* Title */}
-          <h1 className="relative z-10 inline-block animate-appear bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text text-4xl font-semibold leading-tight text-transparent drop-shadow-2xl sm:text-6xl sm:leading-tight md:text-8xl md:leading-tight">
+          <h1 className="relative z-10 inline-block animate-appear bg-gradient-to-r from-foreground to-muted-foreground bg-clip-text font-sans text-3xl sm:text-5xl md:text-6xl font-semibold leading-[1.15] tracking-tight md:tracking-[-0.02em] text-transparent drop-shadow-2xl">
             {title}
           </h1>
 
