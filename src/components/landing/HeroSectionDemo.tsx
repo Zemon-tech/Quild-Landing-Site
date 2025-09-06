@@ -20,11 +20,11 @@ export function HeroSectionDemo() {
         title={
           <>
             <span className="block max-w-[22ch] mx-auto">
-            Master the Skills That AI Can't Replace
+            Master the Skills That AI Can&apos;t Replace
             </span>
           </>
         }
-        description="Quilld is where you'll solve the real-world problems that define a true engineer—from system design to large-scale architecture."
+        description="Quilld is where you&apos;ll solve the real-world problems that define a true engineer—from system design to large-scale architecture."
         actions={[
           {
             text: "Get Started for Free",
