@@ -1,0 +1,323 @@
+{
+  "project": {
+    "name": "Quild Landing Site",
+    "version": "0.1.0",
+    "description": "A Next.js-based landing page application for Quild - the ultimate platform for college students to learn programming, build real-world projects, participate in coding competitions, and join a vibrant community of 10,000+ developers.",
+    "domain": "https://www.quild.in",
+    "type": "Landing Page / Marketing Website",
+    "purpose": "Showcase Quild's programming education platform with features, tutorials, support, and community engagement"
+  },
+  
+  "technology_stack": {
+    "framework": "Next.js 15.4.5",
+    "runtime": "React 19.1.0",
+    "language": "TypeScript 5.x",
+    "styling": {
+      "primary": "Tailwind CSS v4",
+      "utilities": ["class-variance-authority", "clsx", "tailwind-merge", "tw-animate-css"]
+    },
+    "ui_libraries": {
+      "component_system": "Radix UI",
+      "animations": "Framer Motion 12.23.12",
+      "icons": ["Lucide React", "Radix Icons"],
+      "themes": "next-themes"
+    },
+    "authentication": "Clerk (@clerk/nextjs)",
+    "fonts": ["Inter", "Geist Mono", "Space Mono"],
+    "build_tools": {
+      "bundler": "Turbopack (Next.js 15)",
+      "linting": "ESLint 9.x",
+      "css_processing": "PostCSS with Tailwind"
+    }
+  },
+  
+  "project_structure": {
+    "architecture": "Next.js App Router",
+    "rendering": "Hybrid Static/Dynamic Rendering",
+    "components": "Atomic Design Pattern",
+    "directories": {
+      "src/app": "Pages, API routes, layout, metadata (sitemap, robots)",
+      "src/components/blocks": "Section-level components (testimonials, logos)",
+      "src/components/landing": "Page-specific components (HeroSection, FAQSection)",
+      "src/components/ui": "Atomic UI elements (buttons, cards, inputs, modals)",
+      "src/lib": "Utilities and configuration"
+    }
+  },
+  
+  "routes_and_pages": {
+    "public_pages": [
+      {
+        "path": "/",
+        "file": "src/app/page.tsx",
+        "title": "Home - Quild Landing Page",
+        "description": "Main landing page showcasing Quild platform",
+        "last_modified": "2025-09-06",
+        "priority": 1.0,
+        "change_frequency": "weekly"
+      },
+      {
+        "path": "/about",
+        "file": "src/app/about/page.tsx",
+        "title": "About Quild",
+        "description": "Learn about Quild's mission and team",
+        "last_modified": "2025-09-04",
+        "priority": 0.8,
+        "change_frequency": "monthly"
+      },
+      {
+        "path": "/tutorials",
+        "file": "src/app/tutorials/page.tsx",
+        "client_component": "src/app/tutorials/TutorialsPageClient.tsx",
+        "title": "Programming Tutorials",
+        "description": "Comprehensive programming tutorials and learning resources",
+        "last_modified": "2025-09-05",
+        "priority": 0.9,
+        "change_frequency": "weekly"
+      },
+      {
+        "path": "/community",
+        "file": "src/app/community/page.tsx",
+        "title": "Developer Community",
+        "description": "Join our vibrant community of 10,000+ developers",
+        "last_modified": "2025-09-03",
+        "priority": 0.8,
+        "change_frequency": "weekly"
+      },
+      {
+        "path": "/careers",
+        "file": "src/app/careers/page.tsx",
+        "client_component": "src/app/careers/CareersPageClient.tsx",
+        "title": "Careers at Quild",
+        "description": "Join our team and help shape the future of programming education",
+        "last_modified": "2025-09-05",
+        "priority": 0.7,
+        "change_frequency": "monthly"
+      },
+      {
+        "path": "/contact",
+        "file": "src/app/contact/page.tsx",
+        "client_component": "src/app/contact/ContactPageClient.tsx",
+        "title": "Contact Us",
+        "description": "Get in touch with the Quild team",
+        "last_modified": "2025-09-01",
+        "priority": 0.6,
+        "change_frequency": "monthly"
+      },
+      {
+        "path": "/support",
+        "file": "src/app/support/page.tsx",
+        "client_component": "src/app/support/SupportPageClient.tsx",
+        "title": "Support Center",
+        "description": "Find help and documentation for Quild platform",
+        "last_modified": "2025-08-31",
+        "priority": 0.6,
+        "change_frequency": "monthly"
+      },
+      {
+        "path": "/privacy",
+        "file": "src/app/privacy/page.tsx",
+        "client_component": "src/app/privacy/PrivacyPageClient.tsx",
+        "title": "Privacy Policy",
+        "description": "Quild privacy policy and data handling practices",
+        "last_modified": "2025-08-30",
+        "priority": 0.5,
+        "change_frequency": "monthly"
+      },
+      {
+        "path": "/gdpr",
+        "file": "src/app/gdpr/page.tsx",
+        "client_component": "src/app/gdpr/GDPRPageClient.tsx",
+        "title": "GDPR Compliance",
+        "description": "GDPR compliance and data protection information",
+        "last_modified": "2025-08-30",
+        "priority": 0.5,
+        "change_frequency": "monthly"
+      }
+    ],
+    "api_routes": [
+      {
+        "path": "/api/auth/validate-session",
+        "file": "src/app/api/auth/validate-session/route.ts",
+        "method": "GET",
+        "description": "Validates user authentication session using Clerk",
+        "authentication": "required",
+        "response_format": "JSON"
+      }
+    ]
+  },
+  
+  "components": {
+    "landing_components": [
+      "HeroSection",
+      "HeroSectionDemo", 
+      "HeroSectionNew",
+      "FeaturesSection",
+      "FAQSection",
+      "TestimonialsSection",
+      "HowItWorksSection",
+      "EcosystemSection",
+      "InteractiveFeaturesModal",
+      "Navigation",
+      "Footer",
+      "AboutPage"
+    ],
+    "ui_components": [
+      "accordion",
+      "badge", 
+      "bento-grid",
+      "button",
+      "card",
+      "carousel",
+      "checkbox",
+      "faq-with-categories",
+      "feature-section",
+      "feature-with-image",
+      "glow",
+      "gradient-text",
+      "hover-card",
+      "icons",
+      "input",
+      "label",
+      "minimal-card",
+      "mockup",
+      "select",
+      "separator",
+      "skiper-card",
+      "switch",
+      "theme-switcher"
+    ],
+    "block_components": [
+      "logos3",
+      "testimonials-columns-1"
+    ],
+    "utility_components": [
+      "AuthRedirect",
+      "theme-provider"
+    ]
+  },
+  
+  "seo_and_metadata": {
+    "sitemap": {
+      "file": "src/app/sitemap.ts",
+      "url": "https://www.quild.in/sitemap.xml",
+      "pages_included": 9,
+      "generation": "dynamic"
+    },
+    "robots": {
+      "file": "src/app/robots.ts", 
+      "url": "https://www.quild.in/robots.txt",
+      "policy": "allow_all",
+      "crawlers_allowed": [
+        "Googlebot", "Bingbot", "DuckDuckBot", "Yandex", "baiduspider",
+        "GPTBot", "ChatGPT-User", "ClaudeBot", "PerplexityBot", 
+        "FacebookBot", "Twitterbot", "CCBot"
+      ]
+    },
+    "meta_tags": {
+      "title": "Quild - Learn Programming, Build Projects, Join Coding Competitions",
+      "description": "Quild is the ultimate platform for college students to learn programming, build real-world projects, participate in coding competitions, and join a vibrant community of 10,000+ developers.",
+      "keywords": ["programming", "coding", "learn to code", "coding competitions", "programming community", "Quild"],
+      "open_graph": true,
+      "twitter_cards": true,
+      "structured_data": "EducationalOrganization schema"
+    }
+  },
+  
+  "configuration": {
+    "next_config": {
+      "file": "next.config.ts",
+      "images": {
+        "remote_patterns": "allow all HTTPS/HTTP"
+      }
+    },
+    "environment_config": {
+      "file": "src/lib/config.ts",
+      "variables": [
+        "NEXT_PUBLIC_MAIN_APP_URL",
+        "NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL", 
+        "NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL",
+        "NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY"
+      ]
+    },
+    "styling": {
+      "global_css": "src/app/globals.css",
+      "postcss_config": "postcss.config.mjs",
+      "tailwind_config": "Embedded in PostCSS"
+    }
+  },
+  
+  "development": {
+    "scripts": {
+      "dev": "next dev --turbopack",
+      "build": "next build", 
+      "start": "next start",
+      "lint": "next lint"
+    },
+    "dev_server": {
+      "url": "http://localhost:3000",
+      "hot_reload": true,
+      "turbopack": true
+    },
+    "requirements": {
+      "node": "18+",
+      "package_manager": "npm/yarn/pnpm/bun"
+    }
+  },
+  
+  "features": {
+    "authentication": {
+      "provider": "Clerk",
+      "features": ["sign-in", "sign-up", "session-management", "user-profiles"],
+      "redirect_urls": "Configurable via environment variables"
+    },
+    "theming": {
+      "system": "next-themes",
+      "modes": ["light", "dark", "system"],
+      "css_variables": true
+    },
+    "responsive_design": {
+      "mobile_first": true,
+      "breakpoints": "Tailwind default",
+      "components": "All components responsive"
+    },
+    "performance": {
+      "static_generation": true,
+      "image_optimization": true,
+      "font_optimization": true,
+      "code_splitting": "Automatic via Next.js"
+    }
+  },
+  
+  "deployment": {
+    "target": "Vercel (optimized)",
+    "alternatives": ["Any Node.js hosting platform"],
+    "build_output": "Static + Server-side",
+    "environment": "Production ready"
+  },
+  
+  "business_context": {
+    "target_audience": "College students and aspiring developers",
+    "value_proposition": "Learn programming through real-world projects and competitions",
+    "key_metrics": "10,000+ developer community",
+    "contact": "hello@quild.com",
+    "social_media": {
+      "github": "https://github.com/quild",
+      "discord": "https://discord.gg/quild",
+      "twitter": "@quild"
+    }
+  },
+  
+  "maintenance": {
+    "last_updated": "2025-09-06",
+    "version_control": "Git",
+    "code_quality": {
+      "linting": "ESLint with Next.js rules",
+      "type_checking": "TypeScript strict mode",
+      "formatting": "Automatic via ESLint"
+    },
+    "monitoring": {
+      "build_status": "Automated via CI/CD",
+      "performance": "Next.js built-in analytics"
+    }
+  }
+}
