@@ -34,7 +34,7 @@ const features: Feature[] = [
     title: 'AI-Powered Learning Paths',
     subtitle: 'Personalized Recommendations',
     description: 'Our AI analyzes your progress and learning style to recommend the perfect resources. Get personalized learning paths that adapt to your pace and goals.',
-    image: '/images/forge.png',
+    image: '/images/forge-resource.png',
     highlights: [
       'Smart content recommendations',
       'Adaptive difficulty adjustment',
@@ -51,7 +51,7 @@ const features: Feature[] = [
     title: 'College Curriculum Integration',
     subtitle: 'Academic Alignment',
     description: 'All learning resources are carefully aligned with college computer science curricula. Supplement your formal education with practical, real-world applications.',
-    image: '/images/forge.png',
+    image: '/images/forge-resources.png',
     highlights: [
       'CS curriculum alignment',
       'Academic credit support',
@@ -68,7 +68,7 @@ const features: Feature[] = [
     title: 'Resource Management System',
     subtitle: 'Organized Learning',
     description: 'Bookmark, organize, and track your learning resources. Create custom collections, set learning goals, and monitor your progress across all topics.',
-    image: '/images/forge.png',
+    image: '/images/forge-resource.png',
     highlights: [
       'Smart bookmarking',
       'Custom collections',
@@ -85,7 +85,7 @@ const features: Feature[] = [
     title: '500+ Real-World Problems',
     subtitle: 'Interview Preparation',
     description: 'Practice with problems that mirror real technical interviews. From algorithms to system design, build the skills that employers actually want.',
-    image: '/images/crusible.png',
+    image: '/images/crusible-problem.png',
     video: '/videos/crucible-demo.mp4',
     highlights: [
       'Algorithm challenges',
@@ -103,7 +103,7 @@ const features: Feature[] = [
     title: 'AI-Powered Hints & Solutions',
     subtitle: 'Never Get Stuck',
     description: 'Get intelligent hints when you\'re stuck, detailed solution analysis, and personalized feedback. Our AI is like having a coding mentor available 24/7.',
-    image: '/images/crusible.png',
+    image: '/images/crusible-solution-1.png',
     highlights: [
       'Smart hint system',
       'Solution analysis',
@@ -120,7 +120,7 @@ const features: Feature[] = [
     title: 'Portfolio Building',
     subtitle: 'Showcase Your Skills',
     description: 'Build an impressive portfolio of solutions that showcases your problem-solving abilities. Each solved problem becomes a testament to your skills.',
-    image: '/images/crusible.png',
+    image: '/images/crusible-solution-2.png',
     highlights: [
       'Solution showcase',
       'Code quality metrics',

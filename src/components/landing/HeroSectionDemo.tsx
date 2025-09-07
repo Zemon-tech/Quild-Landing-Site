@@ -39,8 +39,8 @@ export function HeroSectionDemo() {
           },
         ]}
         image={{
-          light: "/images/mockup.jpeg", // Path relative to the public folder
-          dark: "/images/mockup.jpeg",
+          light: "/images/nirvana.jpeg", // Path relative to the public folder
+          dark: "/images/nirvana.jpeg",
           alt: "Quild Platform Preview",
         }}
       />
