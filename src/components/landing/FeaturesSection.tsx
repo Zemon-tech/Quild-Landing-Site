@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import ElectricBorder from '@/components/ElectricBorder';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {  
@@ -153,63 +154,84 @@ export default function FeaturesSection() {
               <Sparkles className="w-4 h-4 mr-2" />
               Core Ecosystem
             </Badge>
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight font-inter">
               Three Pillars of
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Excellence</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-mono">
               Our ecosystem transforms how you learn, practice, and grow as a developer. Everything you need to become job-ready.
             </p>
           </motion.div>
 
           {/* Core Features Grid */}
           <div className="grid lg:grid-cols-3 gap-8 mb-24">
-            {coreFeatures.map((feature, index) => (
-              <motion.div
-                key={feature.title}
-                initial={{ opacity: 0, y: 40 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.8, delay: index * 0.2 }}
-                viewport={{ once: true }}
-              >
-                <MinimalCard className="h-full group hover:scale-[1.02] transition-all duration-500">
-                  <MinimalCardImage 
-                    src={feature.image} 
-                    alt={`${feature.title} preview`}
-                    className="mb-4"
-                  />
-                  <MinimalCardContent>
-                    <div className="flex items-center justify-between mb-4">
-                      <Badge variant="secondary" className="text-xs">
-                        {feature.stats}
-                      </Badge>
-                    </div>
-                    
-                    <MinimalCardTitle className="text-2xl font-bold mb-2">
-                      {feature.title}
-                    </MinimalCardTitle>
-                    <Badge variant="outline" className="mb-4 text-xs">
-                      {feature.subtitle}
-                    </Badge>
-                    <MinimalCardDescription className="text-base leading-relaxed mb-6">
-                      {feature.description}
-                    </MinimalCardDescription>
-                  </MinimalCardContent>
-                  
-                  <MinimalCardFooter>
-                    <Button 
-                      variant="outline" 
-                      size="sm" 
-                      className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
-                      onClick={() => openModal(feature.category)}
-                    >
-                      Explore {feature.title}
-                      <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </MinimalCardFooter>
-                </MinimalCard>
-              </motion.div>
-            ))}
+            {coreFeatures.map((feature, index) => {
+              // Define colors for each pillar
+              const getElectricColor = (category: string) => {
+                switch (category) {
+                  case 'forge': return '#3B82F6'; // Blue for The Forge
+                  case 'crucible': return '#A855F7'; // Purple for The Crucible  
+                  case 'arena': return '#F97316'; // Orange for The Arena
+                  default: return '#5227FF';
+                }
+              };
+
+              return (
+                <motion.div
+                  key={feature.title}
+                  initial={{ opacity: 0, y: 40 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, delay: index * 0.2 }}
+                  viewport={{ once: true }}
+                >
+                  <ElectricBorder
+                    color={getElectricColor(feature.category)}
+                    speed={1.2}
+                    chaos={0.8}
+                    thickness={2}
+                    className="h-full"
+                    style={{}}
+                  >
+                    <MinimalCard className="h-full group hover:scale-[1.02] transition-all duration-500 border-0">
+                      <MinimalCardImage 
+                        src={feature.image} 
+                        alt={`${feature.title} preview`}
+                        className="mb-4"
+                      />
+                      <MinimalCardContent>
+                        <div className="flex items-center justify-between mb-4">
+                          <Badge variant="secondary" className="text-xs">
+                            {feature.stats}
+                          </Badge>
+                        </div>
+                        
+                        <MinimalCardTitle className="text-2xl font-bold mb-2 font-inter">
+                          {feature.title}
+                        </MinimalCardTitle>
+                        <Badge variant="outline" className="mb-4 text-xs">
+                          {feature.subtitle}
+                        </Badge>
+                        <MinimalCardDescription className="text-base leading-relaxed mb-6 font-mono text-muted-foreground">
+                          {feature.description}
+                        </MinimalCardDescription>
+                      </MinimalCardContent>
+                      
+                      <MinimalCardFooter>
+                        <Button 
+                          variant="outline" 
+                          size="sm" 
+                          className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                          onClick={() => openModal(feature.category)}
+                        >
+                          Explore {feature.title}
+                          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                        </Button>
+                      </MinimalCardFooter>
+                    </MinimalCard>
+                  </ElectricBorder>
+                </motion.div>
+              );
+            })}
           </div>
 
           {/* Innovation Features */}
@@ -221,10 +243,10 @@ export default function FeaturesSection() {
             viewport={{ once: true }}
           >
             <div className="text-center mb-12">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4">
+              <h3 className="text-2xl md:text-3xl font-bold mb-4 font-inter">
                 Powered by <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Innovation</span>
               </h3>
-              <p className="text-muted-foreground max-w-2xl mx-auto">
+              <p className="text-muted-foreground max-w-2xl mx-auto font-space-mono">
                 Advanced features that make learning more effective, engaging, and personalized
               </p>
             </div>
@@ -248,7 +270,7 @@ export default function FeaturesSection() {
               <div className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
                 500+
               </div>
-              <div className="text-sm text-muted-foreground font-medium">
+              <div className="text-sm text-muted-foreground font-medium font-space-mono">
                 Programming Challenges
               </div>
             </div>
@@ -256,7 +278,7 @@ export default function FeaturesSection() {
               <div className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
                 10K+
               </div>
-              <div className="text-sm text-muted-foreground font-medium">
+              <div className="text-sm text-muted-foreground font-medium font-space-mono">
                 Active Students
               </div>
             </div>
@@ -264,7 +286,7 @@ export default function FeaturesSection() {
               <div className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
                 100+
               </div>
-              <div className="text-sm text-muted-foreground font-medium">
+              <div className="text-sm text-muted-foreground font-medium font-space-mono">
                 Learning Resources
               </div>
             </div>
@@ -272,7 +294,7 @@ export default function FeaturesSection() {
               <div className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
                 24/7
               </div>
-              <div className="text-sm text-muted-foreground font-medium">
+              <div className="text-sm text-muted-foreground font-medium font-space-mono">
                 AI Support
               </div>
             </div>

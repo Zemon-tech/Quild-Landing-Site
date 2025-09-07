@@ -2,7 +2,6 @@
 
 import Navigation from '@/components/landing/Navigation';
 import { HeroSectionDemo } from '@/components/landing/HeroSectionDemo';
-import EcosystemSection from '@/components/landing/EcosystemSection';
 import FeaturesSection from '@/components/landing/FeaturesSection';
 import HowItWorksSection from '@/components/landing/HowItWorksSection';
 import FAQSection from '@/components/landing/FAQSection';
@@ -14,7 +13,6 @@ export default function Home() {
     <main className="min-h-screen font-space-mono">
       <Navigation />
       <HeroSectionDemo />
-      <EcosystemSection />
       <FeaturesSection />
       <HowItWorksSection />
       <TestimonialsSection />
