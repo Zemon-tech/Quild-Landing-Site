@@ -38,7 +38,7 @@ const coreFeatures: {
     title: "The Forge",
     subtitle: "Learn & Build",
     description: "Access 100+ curated resources from articles to courses, all aligned with your college curriculum. AI-powered recommendations ensure you learn exactly what you need.",
-    image: "/images/forge-resources.png",
+    image: "/images/forge.png",
     color: "from-blue-500 to-cyan-500",
     highlights: [
       "100+ Learning Resources",
@@ -53,7 +53,7 @@ const coreFeatures: {
     title: "The Crucible", 
     subtitle: "Test & Solve",
     description: "Master 500+ real-world problems with AI assistance. Build interview-ready skills and create a portfolio that impresses employers.",
-    image: "/images/crusible-category.png",
+    image: "/images/crusible.png",
     color: "from-purple-500 to-pink-500",
     highlights: [
       "500+ Programming Challenges",
