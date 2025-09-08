@@ -166,15 +166,7 @@ export default function FeaturesSection() {
           {/* Core Features Grid */}
           <div className="grid lg:grid-cols-3 gap-8 mb-24">
             {coreFeatures.map((feature, index) => {
-              // Define colors for each pillar
-              const getElectricColor = (category: string) => {
-                switch (category) {
-                  case 'forge': return '#3B82F6'; // Blue for The Forge
-                  case 'crucible': return '#A855F7'; // Purple for The Crucible  
-                  case 'arena': return '#F97316'; // Orange for The Arena
-                  default: return '#5227FF';
-                }
-              };
+             
 
               return (
                 <motion.div
@@ -184,51 +176,45 @@ export default function FeaturesSection() {
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
                 >
-                  <ElectricBorder
-                    color={getElectricColor(feature.category)}
-                    speed={1.2}
-                    chaos={0.8}
-                    thickness={2}
-                    className="h-full"
-                    style={{}}
-                  >
-                    <MinimalCard className="h-full group hover:scale-[1.02] transition-all duration-500 border-0">
-                      <MinimalCardImage 
-                        src={feature.image} 
-                        alt={`${feature.title} preview`}
-                        className="mb-4"
-                      />
-                      <MinimalCardContent>
-                        <div className="flex items-center justify-between mb-4">
-                          <Badge variant="secondary" className="text-xs">
-                            {feature.stats}
+                  
+                  
+                      <MinimalCard className="h-full group hover:scale-[1.02] transition-all duration-500 border-0">
+                        <MinimalCardImage 
+                          src={feature.image} 
+                          alt={`${feature.title} preview`}
+                          className="mb-4"
+                        />
+                        <MinimalCardContent>
+                          <div className="flex items-center justify-between mb-4">
+                            <Badge variant="secondary" className="text-xs">
+                              {feature.stats}
+                            </Badge>
+                          </div>
+                          
+                          <MinimalCardTitle className="text-2xl font-bold mb-2 font-inter">
+                            {feature.title}
+                          </MinimalCardTitle>
+                          <Badge variant="outline" className="mb-4 text-xs">
+                            {feature.subtitle}
                           </Badge>
-                        </div>
+                          <MinimalCardDescription className="text-base leading-relaxed mb-6 font-mono text-muted-foreground">
+                            {feature.description}
+                          </MinimalCardDescription>
+                        </MinimalCardContent>
                         
-                        <MinimalCardTitle className="text-2xl font-bold mb-2 font-inter">
-                          {feature.title}
-                        </MinimalCardTitle>
-                        <Badge variant="outline" className="mb-4 text-xs">
-                          {feature.subtitle}
-                        </Badge>
-                        <MinimalCardDescription className="text-base leading-relaxed mb-6 font-mono text-muted-foreground">
-                          {feature.description}
-                        </MinimalCardDescription>
-                      </MinimalCardContent>
-                      
-                      <MinimalCardFooter>
-                        <Button 
-                          variant="outline" 
-                          size="sm" 
-                          className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
-                          onClick={() => openModal(feature.category)}
-                        >
-                          Explore {feature.title}
-                          <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-                        </Button>
-                      </MinimalCardFooter>
-                    </MinimalCard>
-                  </ElectricBorder>
+                        <MinimalCardFooter>
+                          <Button 
+                            variant="outline" 
+                            size="sm" 
+                            className="w-full group-hover:bg-primary group-hover:text-primary-foreground transition-colors"
+                            onClick={() => openModal(feature.category)}
+                          >
+                            Explore {feature.title}
+                            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+                          </Button>
+                        </MinimalCardFooter>
+                      </MinimalCard>
+                    
                 </motion.div>
               );
             })}
