@@ -2,7 +2,8 @@
 
 import { useState } from 'react';
 import { motion } from 'framer-motion';
-import ElectricBorder from '@/components/ElectricBorder';
+import { Inter, Space_Mono } from 'next/font/google';
+import { MagicCard } from '@/components/magicui/magic-card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {  
@@ -15,7 +16,6 @@ import {
   Globe
 } from 'lucide-react';
 import {
-  MinimalCard,
   MinimalCardImage,
   MinimalCardTitle,
   MinimalCardDescription,
@@ -24,6 +24,9 @@ import {
 } from '@/components/ui/minimal-card';
 import { BentoGrid, BentoCard } from '@/components/ui/bento-grid';
 import InteractiveFeaturesModal from './InteractiveFeaturesModal';
+
+const inter = Inter({ subsets: ['latin'], display: 'swap' });
+const spaceMono = Space_Mono({ weight: ['400', '700'], subsets: ['latin'], display: 'swap' });
 
 const coreFeatures: {
   title: string;
@@ -154,11 +157,11 @@ export default function FeaturesSection() {
               <Sparkles className="w-4 h-4 mr-2" />
               Core Ecosystem
             </Badge>
-            <h2 className="text-4xl md:text-6xl font-bold mb-6 tracking-tight font-inter">
+            <h2 className="text-4xl md:text-6xl font-bold mb-8 tracking-tight font-inter">
               Three Pillars of
               <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent"> Excellence</span>
             </h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed font-mono">
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed font-mono">
               Our ecosystem transforms how you learn, practice, and grow as a developer. Everything you need to become job-ready.
             </p>
           </motion.div>
@@ -167,12 +170,16 @@ export default function FeaturesSection() {
           <div className="grid lg:grid-cols-3 gap-8 mb-24">
             {coreFeatures.map((feature, index) => {
               // Define colors for each pillar
-              const getElectricColor = (category: string) => {
+              const getMagicGradient = (category: string) => {
                 switch (category) {
-                  case 'forge': return '#3B82F6'; // Blue for The Forge
-                  case 'crucible': return '#A855F7'; // Purple for The Crucible  
-                  case 'arena': return '#F97316'; // Orange for The Arena
-                  default: return '#5227FF';
+                  case 'forge':
+                    return { from: '#3B82F6', to: '#06B6D4' }; // blue -> cyan
+                  case 'crucible':
+                    return { from: '#A855F7', to: '#EC4899' }; // purple -> pink
+                  case 'arena':
+                    return { from: '#F97316', to: '#EF4444' }; // orange -> red
+                  default:
+                    return { from: '#5227FF', to: '#7C3AED' };
                 }
               };
 
@@ -184,39 +191,39 @@ export default function FeaturesSection() {
                   transition={{ duration: 0.8, delay: index * 0.2 }}
                   viewport={{ once: true }}
                 >
-                  <ElectricBorder
-                    color={getElectricColor(feature.category)}
-                    speed={1.2}
-                    chaos={0.8}
-                    thickness={2}
-                    className="h-full"
-                    style={{}}
+                  <MagicCard
+                    className="h-full rounded-3xl overflow-hidden"
+                    gradientFrom={getMagicGradient(feature.category).from}
+                    gradientTo={getMagicGradient(feature.category).to}
+                    gradientColor="#262626"
+                    gradientOpacity={0.5}
+                    gradientSize={220}
                   >
-                    <MinimalCard className="h-full group hover:scale-[1.02] transition-all duration-500 border-0">
+                    <div className="h-full p-4 sm:p-6 flex flex-col">
                       <MinimalCardImage 
                         src={feature.image} 
                         alt={`${feature.title} preview`}
                         className="mb-4"
                       />
-                      <MinimalCardContent>
+                      <MinimalCardContent className="flex-1">
                         <div className="flex items-center justify-between mb-4">
                           <Badge variant="secondary" className="text-xs">
                             {feature.stats}
                           </Badge>
                         </div>
                         
-                        <MinimalCardTitle className="text-2xl font-bold mb-2 font-inter">
+                        <MinimalCardTitle className="text-xl font-bold mb-4 font-inter">
                           {feature.title}
                         </MinimalCardTitle>
                         <Badge variant="outline" className="mb-4 text-xs">
                           {feature.subtitle}
                         </Badge>
-                        <MinimalCardDescription className="text-base leading-relaxed mb-6 font-mono text-muted-foreground">
+                        <MinimalCardDescription className="text-sm leading-relaxed mb-8 font-mono text-muted-foreground">
                           {feature.description}
                         </MinimalCardDescription>
                       </MinimalCardContent>
                       
-                      <MinimalCardFooter>
+                      <MinimalCardFooter className="mt-auto">
                         <Button 
                           variant="outline" 
                           size="sm" 
@@ -227,8 +234,8 @@ export default function FeaturesSection() {
                           <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
                         </Button>
                       </MinimalCardFooter>
-                    </MinimalCard>
-                  </ElectricBorder>
+                    </div>
+                  </MagicCard>
                 </motion.div>
               );
             })}
@@ -243,17 +250,22 @@ export default function FeaturesSection() {
             viewport={{ once: true }}
           >
             <div className="text-center mb-12">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 font-inter">
+              <h3 className={`text-3xl md:text-4xl font-bold mb-6 ${inter.className}`}>
                 Powered by <span className="bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">Innovation</span>
               </h3>
-              <p className="text-muted-foreground max-w-2xl mx-auto font-space-mono">
+              <p className={`text-base text-muted-foreground max-w-2xl mx-auto ${spaceMono.className}`}>
                 Advanced features that make learning more effective, engaging, and personalized
               </p>
             </div>
             
             <BentoGrid className="lg:grid-rows-3">
               {innovationFeatures.map((innovationFeature) => (
-                <BentoCard key={innovationFeature.name} {...innovationFeature} />
+                <BentoCard 
+                  key={innovationFeature.name} 
+                  {...innovationFeature} 
+                  titleClassName={inter.className}
+                  descriptionClassName={spaceMono.className}
+                />
               ))}
             </BentoGrid>
           </motion.div>
@@ -267,7 +279,7 @@ export default function FeaturesSection() {
             viewport={{ once: true }}
           >
             <div className="text-center">
-              <div className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
                 500+
               </div>
               <div className="text-sm text-muted-foreground font-medium font-space-mono">
@@ -275,7 +287,7 @@ export default function FeaturesSection() {
               </div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
                 10K+
               </div>
               <div className="text-sm text-muted-foreground font-medium font-space-mono">
@@ -283,19 +295,11 @@ export default function FeaturesSection() {
               </div>
             </div>
             <div className="text-center">
-              <div className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
+              <div className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-4">
                 100+
               </div>
               <div className="text-sm text-muted-foreground font-medium font-space-mono">
                 Learning Resources
-              </div>
-            </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-2">
-                24/7
-              </div>
-              <div className="text-sm text-muted-foreground font-medium font-space-mono">
-                AI Support
               </div>
             </div>
           </motion.div>
