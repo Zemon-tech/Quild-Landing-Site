@@ -1,36 +1,35 @@
 'use client';
 
 import { motion } from 'framer-motion';
+
 import { Badge } from '@/components/ui/badge';
 import { FeatureSteps } from '@/components/ui/feature-section';
-import { 
-  Sparkles,
-} from 'lucide-react';
+import { Sparkles } from 'lucide-react';
 
 const journeyFeatures = [
   {
     step: 'Step 1',
     title: 'Create Your Profile',
     content: 'Set up your developer profile in 2 minutes. Choose your learning path, add your college details, and let our AI personalize your experience based on your goals.',
-    image: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=2070&auto=format&fit=crop'
+    image: '/images/create_profile.png' // Updated path
   },
   {
     step: 'Step 2',
     title: 'Learn & Practice',
     content: 'Access 100+ curated resources in The Forge and solve 500+ real-world problems in The Crucible. Get AI-powered hints and track your progress with detailed analytics.',
-    image: 'https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?q=80&w=2069&auto=format&fit=crop'
+    image: '/images/learn&practice.png' // Updated path
   },
   {
     step: 'Step 3',
     title: 'Compete & Connect',
     content: 'Join The Arena with 10K+ students. Participate in weekly competitions, showcase your projects, and connect with mentors who can launch your career.',
-    image: 'https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=2071&auto=format&fit=crop'
+    image: '/images/compete&connect.png' // Updated path
   },
   {
     step: 'Step 4',
     title: 'Launch Your Career',
     content: 'Build an impressive portfolio, connect with employers, and land your dream job. Our platform bridges the gap between learning and professional success.',
-    image: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?q=80&w=2070&auto=format&fit=crop'
+    image: '/images/launch_carrer.png' // Updated path
   }
 ];
 
@@ -73,7 +72,7 @@ export default function HowItWorksSection() {
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
         >
-          <FeatureSteps 
+          <FeatureSteps
             features={journeyFeatures}
             title="Your Journey to Success"
             autoPlayInterval={4000}
@@ -82,4 +81,4 @@ export default function HowItWorksSection() {
       </div>
     </section>
   );
-} 
+}
