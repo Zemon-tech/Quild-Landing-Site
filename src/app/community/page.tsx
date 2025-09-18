@@ -2,6 +2,7 @@
 
 import Navigation from '@/components/landing/Navigation';
 import { motion } from 'framer-motion';
+import Footer from '@/components/landing/Footer';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { 
@@ -244,6 +245,7 @@ export default function CommunityPage() {
           </div>
         </section>
       </div>
+      <Footer />
     </>
   );
 }

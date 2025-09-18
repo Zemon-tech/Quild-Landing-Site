@@ -2,6 +2,7 @@
 
 import Navigation from '@/components/landing/Navigation';
 import { motion } from 'framer-motion';
+import Footer from '@/components/landing/Footer';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
@@ -378,6 +379,7 @@ export default function SupportPage() {
           </div>
         </section>
       </div>
+      <Footer />
     </>
   );
 } 

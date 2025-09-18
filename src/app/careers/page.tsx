@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import CareersPageClient from './CareersPageClient';
+import Footer from '@/components/landing/Footer';
 
 export const metadata: Metadata = {
   title: "Careers at Quild - Join Our Team & Build the Future of Programming Education",
@@ -24,5 +25,10 @@ export const metadata: Metadata = {
 };
 
 export default function CareersPage() {
-  return <CareersPageClient />;
+  return (
+    <>
+      <CareersPageClient />
+      <Footer />
+    </>
+  );
 } 

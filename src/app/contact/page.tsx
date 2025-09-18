@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import ContactPageClient from './ContactPageClient';
+import Footer from '@/components/landing/Footer';
 
 export const metadata: Metadata = {
   title: "Contact Quild - Get Support, Ask Questions & Partner With Us",
@@ -24,5 +25,10 @@ export const metadata: Metadata = {
 };
 
 export default function ContactPage() {
-  return <ContactPageClient />;
+  return (
+    <>
+      <ContactPageClient />
+      <Footer />
+    </>
+  );
 } 

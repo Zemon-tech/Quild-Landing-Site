@@ -1,5 +1,6 @@
 import type { Metadata } from 'next';
 import TutorialsPageClient from './TutorialsPageClient';
+import Footer from '@/components/landing/Footer';
 
 export const metadata: Metadata = {
   title: "Quild Programming Tutorials - Learn Coding from Beginner to Advanced",
@@ -24,5 +25,10 @@ export const metadata: Metadata = {
 };
 
 export default function TutorialsPage() {
-  return <TutorialsPageClient />;
+  return (
+    <>
+      <TutorialsPageClient />
+      <Footer />
+    </>
+  );
 } 

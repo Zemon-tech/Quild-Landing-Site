@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import AboutSection from '@/components/landing/AboutPage';
 import Navigation from '@/components/landing/Navigation';
+import Footer from '@/components/landing/Footer';
 
 export const metadata: Metadata = {
   title: "About Quild - Learn Programming with Real Projects & Coding Competitions",
@@ -29,6 +30,7 @@ export default function AboutPage() {
     <>
       <Navigation />
       <AboutSection />
+      <Footer />
     </>
   );
 } 
