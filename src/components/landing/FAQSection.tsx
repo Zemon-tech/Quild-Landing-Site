@@ -17,35 +17,15 @@ const faqItems = [
     category: "Platform",
   },
   {
-    question: "Are the programming challenges suitable for beginners?",
-    answer: "Absolutely! We offer challenges for all skill levels - beginner, intermediate, advanced, and expert. Our AI adapts the difficulty based on your progress, and you get personalized hints when stuck.",
-    category: "Learning",
-  },
-  {
-    question: "How does the community aspect work?",
-    answer: "Join The Arena to participate in weekly coding competitions, showcase your projects, and connect with mentors. Real-time chat channels let you collaborate with 10K+ students and build your professional network.",
-    category: "Community",
-  },
-  {
     question: "Can I showcase my projects to potential employers?",
     answer: "Yes! Build an impressive portfolio through our platform and connect directly with employers. Our career services help bridge the gap between learning and professional opportunities. Many students land jobs through Quild.",
     category: "Career",
-  },
-  {
-    question: "What kind of learning resources are available?",
-    answer: "Access 100+ curated resources including articles, videos, courses, books, tools, repositories, and documentation. All content is aligned with college curriculums and includes AI-powered recommendations.",
-    category: "Learning",
   },
   {
     question: "How does the AI assistance work?",
     answer: "Our AI provides personalized hints for problems, code analysis and feedback, learning path recommendations, and adapts to your progress. It's like having a personal coding mentor available 24/7.",
     category: "Platform",
   },
-  {
-    question: "Is there a free plan available?",
-    answer: "Yes! Start with our free plan that gives you access to The Forge, public Crucible problems, and public Arena events. Upgrade to Pro ($9/mo) for unlimited access and AI-powered hints.",
-    category: "Pricing",
-  }
 ];
 
 export default function FAQSection() {
