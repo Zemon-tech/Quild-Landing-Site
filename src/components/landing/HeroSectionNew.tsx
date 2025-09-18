@@ -78,18 +78,18 @@ export function HeroSectionNew({
           </p>
 
           {/* Actions */}
-          <div className="relative z-10 flex animate-appear justify-center gap-4 opacity-0 delay-300">
-            <div className="relative z-10 flex animate-appear justify-center gap-4 opacity-0 delay-300">
+          <div className="relative z-10 flex animate-appear justify-center gap-3 md:gap-4 opacity-0 delay-300">
+            <div className="relative z-10 flex animate-appear justify-center gap-3 md:gap-4 opacity-0 delay-300">
               {actions.map((action, index) => (
                 action.isSignUpButton ? (
                   <SignUpButton key={index} mode="modal">
-                    <Button variant={action.variant} size="lg" className="flex items-center gap-2">
+                    <Button variant={action.variant} size="sm" className="flex items-center gap-2 md:h-11 md:px-8 md:text-base">
                       {action.icon}
                       {action.text}
                     </Button>
                   </SignUpButton>
                 ) : (
-                  <Button key={index} variant={action.variant} size="lg" asChild>
+                  <Button key={index} variant={action.variant} size="sm" asChild className="md:h-11 md:px-8 md:text-base">
                     <a href={action.href} className="flex items-center gap-2">
                       {action.icon}
                       {action.text}
