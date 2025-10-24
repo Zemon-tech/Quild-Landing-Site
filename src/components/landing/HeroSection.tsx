@@ -3,6 +3,7 @@
 import { motion } from 'framer-motion';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Sparkles, Code, Users, Trophy } from 'lucide-react';
+import Link from 'next/link';
 
 export default function HeroSection() {
   return (
@@ -88,9 +89,11 @@ export default function HeroSection() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.6 }}
         >
-          <Button size="lg" className="text-lg px-8 py-6">
-            Get Started for Free
-            <ArrowRight className="ml-2 h-5 w-5" />
+          <Button size="lg" className="text-lg px-8 py-6" asChild>
+            <Link href="/waitlist">
+              Join Now
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
           </Button>
           <Button variant="outline" size="lg" className="text-lg px-8 py-6">
             Explore Features

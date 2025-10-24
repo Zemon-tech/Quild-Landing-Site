@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 import PrivacyPageClient from './PrivacyPageClient';
-import Footer from '@/components/landing/Footer';
 
 export const metadata: Metadata = {
   title: "Privacy Policy - Quild",
@@ -24,12 +23,7 @@ export const metadata: Metadata = {
 };
 
 export default function PrivacyPage() {
-  return (
-    <>
-      <PrivacyPageClient />
-      <Footer />
-    </>
-  );
+  return <PrivacyPageClient />;
 }
 
 

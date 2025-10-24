@@ -1,7 +1,7 @@
 import React from 'react';
 import Link from 'next/link';
 import { ShaderAnimation } from '@/components/shader-animation';
-import { CheckCircle, ArrowLeft } from 'lucide-react';
+import { Check, ArrowLeft } from 'lucide-react';
 
 const ThankYouPage = () => {
   return (
@@ -12,21 +12,14 @@ const ThankYouPage = () => {
       </div>
       
       {/* Thank You Content */}
-      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen px-4">
-        {/* Success Badge */}
-        <div className="mb-8">
-          <div className="inline-flex items-center px-4 py-2 rounded-full bg-green-500/20 backdrop-blur-sm border border-green-400/30 text-green-400 text-sm">
-            <CheckCircle size={16} className="mr-2" />
-            Success
-          </div>
-        </div>
+      <div className="absolute inset-0 z-10 grid place-items-center px-4">
 
         {/* Main Content Card */}
-        <div className="w-full max-w-md mx-auto">
+        <div className="w-full max-w-md">
           <div className="bg-white/10 backdrop-blur-md rounded-2xl border border-white/20 p-8 shadow-2xl text-center">
             {/* Success Icon */}
-            <div className="w-20 h-20 mx-auto mb-6 bg-green-500/20 rounded-full flex items-center justify-center">
-              <CheckCircle size={40} className="text-green-400" />
+            <div className="w-10 h-10 mx-auto mb-6 rounded-full bg-green-500/20 flex items-center justify-center">
+              <Check className="text-green-400 w-8 h-8 weight-bold" />
             </div>
 
             {/* Heading */}
@@ -48,21 +41,7 @@ const ThankYouPage = () => {
               <ArrowLeft size={18} className="mr-2" />
               Back to Home
             </Link>
-
-            {/* Footer */}
-            <div className="mt-12 text-center">
-              <p className="text-white/40 text-sm">
-                2025 Quild
-              </p>
-            </div>
           </div>
-        </div>
-
-        {/* Footer */}
-        <div className="mt-12 text-center">
-          <p className="text-white/40 text-sm">
-            2025 Quild
-          </p>
         </div>
       </div>
     </div>

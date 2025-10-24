@@ -216,8 +216,8 @@ export default function AboutPage() {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button size="lg" asChild>
-                <a href={process.env.NEXT_PUBLIC_MAIN_APP_URL || 'http://localhost:5173'}>
-                  Get Started for Free
+                <a href="/waitlist">
+                  Join Now
                 </a>
               </Button>
               <Button variant="outline" size="lg" asChild>
