@@ -10,7 +10,7 @@ export default function WaitlistPage() {
       </div>
       
       {/* Waitlist Content */}
-      <div className="relative z-10">
+      <div className="relative z-10 flex items-center justify-center min-h-screen">
         <CustomWaitlist />
       </div>
     </div>
