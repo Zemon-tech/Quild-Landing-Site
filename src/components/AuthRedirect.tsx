@@ -1,6 +1,6 @@
 'use client';
 
-import { useAuth } from '@clerk/nextjs';
+import { useAuth, useUser } from '@clerk/nextjs';
 import { useEffect, useRef } from 'react';
 
 interface AuthRedirectProps {
@@ -8,12 +8,16 @@ interface AuthRedirectProps {
 }
 
 export function AuthRedirect({ children }: AuthRedirectProps) {
-  const { isSignedIn, isLoaded } = useAuth();
+  const { isSignedIn, isLoaded: isAuthLoaded } = useAuth();
+  const { user, isLoaded: isUserLoaded } = useUser();
   const sessionCheckInterval = useRef<NodeJS.Timeout | null>(null);
 
   useEffect(() => {
-    if (isLoaded && isSignedIn) {
-      // Redirect to main app using environment variable
+    const isLoaded = isAuthLoaded && isUserLoaded;
+    // Redirect only if the user is fully signed in AND has been granted access.
+    const hasAccess = user?.publicMetadata?.canAccessApp === true;
+
+    if (isLoaded && isSignedIn && hasAccess) {
       const mainAppUrl = process.env.NEXT_PUBLIC_MAIN_APP_URL;
       if (mainAppUrl) {
         window.location.href = mainAppUrl;
@@ -23,10 +27,11 @@ export function AuthRedirect({ children }: AuthRedirectProps) {
         window.location.href = 'http://localhost:5173';
       }
     }
-  }, [isSignedIn, isLoaded]);
+  }, [isSignedIn, isAuthLoaded, isUserLoaded, user]);
 
   // Set up session monitoring to detect logout from main app
   useEffect(() => {
+    const isLoaded = isAuthLoaded && isUserLoaded;
     if (isLoaded && isSignedIn) {
       // For production: Use Clerk's built-in session validation
       // This is more reliable than cookie checking across domains
@@ -61,7 +66,7 @@ export function AuthRedirect({ children }: AuthRedirectProps) {
         sessionCheckInterval.current = null;
       }
     };
-  }, [isLoaded, isSignedIn]);
+  }, [isAuthLoaded, isUserLoaded, isSignedIn]);
 
   // Listen for storage events (when logout happens in another tab/window)
   useEffect(() => {
@@ -89,12 +94,14 @@ export function AuthRedirect({ children }: AuthRedirectProps) {
   }, [isSignedIn]);
 
   // Don't render anything while checking auth status
+  const isLoaded = isAuthLoaded && isUserLoaded;
   if (!isLoaded) {
     return null;
   }
 
-  // If user is signed in, don't render the landing page
-  if (isSignedIn) {
+  // Do not render children if a redirect is pending (user has access)
+  const hasAccess = user?.publicMetadata?.canAccessApp === true;
+  if (isSignedIn && hasAccess) {
     return null;
   }
 
