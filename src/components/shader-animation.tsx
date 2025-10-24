@@ -3,13 +3,18 @@
 import { useEffect, useRef } from "react"
 import * as THREE from "three"
 
+type ShaderUniforms = {
+  time: { value: number }
+  resolution: { value: THREE.Vector2 }
+}
+
 export function ShaderAnimation() {
   const containerRef = useRef<HTMLDivElement>(null)
   const sceneRef = useRef<{
     camera: THREE.Camera
     scene: THREE.Scene
     renderer: THREE.WebGLRenderer
-    uniforms: any
+    uniforms: ShaderUniforms
     animationId: number
   } | null>(null)
 
@@ -57,9 +62,9 @@ export function ShaderAnimation() {
     const scene = new THREE.Scene()
     const geometry = new THREE.PlaneGeometry(2, 2)
 
-    const uniforms = {
-      time: { type: "f", value: 1.0 },
-      resolution: { type: "v2", value: new THREE.Vector2() },
+    const uniforms: ShaderUniforms = {
+      time: { value: 1.0 },
+      resolution: { value: new THREE.Vector2() },
     }
 
     const material = new THREE.ShaderMaterial({

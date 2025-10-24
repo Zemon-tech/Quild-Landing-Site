@@ -31,7 +31,7 @@ const ThankYouPage = () => {
 
             {/* Heading */}
             <h1 className="text-3xl font-bold text-white mb-4">
-              You're on the Waitlist!
+              You&apos;re on the Waitlist!
             </h1>
             
             {/* Description */}
