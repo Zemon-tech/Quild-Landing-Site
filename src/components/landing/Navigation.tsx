@@ -9,7 +9,7 @@ import {
 } from 'lucide-react';
 import { SubjectIcon } from '@/components/ui/icons';
 import Link from 'next/link';
-import { useAuth, SignInButton, UserButton } from '@clerk/nextjs';
+import { useAuth, UserButton } from '@clerk/nextjs';
 
 const navigationItems = [
   { name: 'Features', href: '/features' },
@@ -56,14 +56,9 @@ export default function Navigation() {
               </>
             ) : (
               <>
-                <SignInButton mode="modal">
-                  <Button variant="ghost" size="sm">
-                    Sign In
-                  </Button>
-                </SignInButton>
                 <Button size="sm" asChild>
                   <Link href="/waitlist">
-                    Join Waitlist
+                    Join Now
                   </Link>
                 </Button>
               </>
@@ -113,14 +108,9 @@ export default function Navigation() {
                     </>
                   ) : (
                     <>
-                      <SignInButton mode="modal">
-                        <Button variant="ghost" className="w-full justify-start">
-                          Sign In
-                        </Button>
-                      </SignInButton>
                       <Button className="w-full" asChild>
                         <Link href="/waitlist">
-                          Join Waitlist
+                          Join Now
                         </Link>
                       </Button>
                     </>

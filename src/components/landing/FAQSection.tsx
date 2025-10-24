@@ -7,27 +7,23 @@ import { Sparkles } from 'lucide-react';
 
 const faqItems = [
   {
-    question: "What problem does Quild actually solve?",
-    answer:
-      "Students don't need another giant course dump. Quild unifies learning (The Forge), practice (The Crucible), and community + showcase (The Arena) with AI guidance so you can learn, do, and get noticed—end to end.",
-    category: "Platform",
-  },
-  {
-    question: "How do I get started?",
-    answer:
-      "Create your profile, pick a learning path, and start in minutes. New to coding? Begin with beginner resources in The Forge, then practice in The Crucible with AI hints and feedback.",
+    question: "How do I get started with Quild?",
+    answer: "Getting started takes just 2 minutes! Create your profile, choose your learning path, and dive into our curated resources. Our AI will personalize everything based on your goals and skill level.",
     category: "Getting Started",
   },
   {
-    question: "Can I showcase projects and reach employers?",
-    answer:
-      "Yes. Build a public portfolio, submit projects to Arena showcases, climb leaderboards, and share your progress. Many students use Quild to demonstrate real skills and get career opportunities.",
+    question: "What makes Quild different from other learning platforms?",
+    answer: "Quild combines learning, practice, and community in one platform. The Forge (100+ resources), The Crucible (500+ problems), and The Arena (10K+ students) create a complete ecosystem that transforms you from a learner to a job-ready developer.",
+    category: "Platform",
+  },
+  {
+    question: "Can I showcase my projects to potential employers?",
+    answer: "Yes! Build an impressive portfolio through our platform and connect directly with employers. Our career services help bridge the gap between learning and professional opportunities. Many students land jobs through Quild.",
     category: "Career",
   },
   {
-    question: "How does the AI help me learn faster?",
-    answer:
-      "AI gives contextual hints, code analysis, solution feedback, and personalized resource recommendations. It adapts to your progress—like having a mentor 24/7 across Forge, Crucible, and Arena.",
+    question: "How does the AI assistance work?",
+    answer: "Our AI provides personalized hints for problems, code analysis and feedback, learning path recommendations, and adapts to your progress. It's like having a personal coding mentor available 24/7.",
     category: "Platform",
   },
 ];

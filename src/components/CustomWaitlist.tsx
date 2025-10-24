@@ -21,9 +21,11 @@ export function CustomWaitlist() {
         Coming soon!
       </h1>
 
-      {/* Waitlist Content */}
-      <div className="w-full max-w-md mx-auto">
-        <Waitlist afterJoinWaitlistUrl={redirectUrl} />
+      {/* Waitlist Content - Fixed Centering */}
+      <div className="w-full max-w-md mx-auto flex justify-center">
+        <div className="flex items-center justify-center w-full">
+          <Waitlist afterJoinWaitlistUrl={redirectUrl} />
+        </div>
       </div>
     </div>
   )

@@ -27,8 +27,8 @@ export function HeroSectionDemo() {
         description="Quilld is where you&apos;ll solve the real-world problems that define a true engineer—from system design to large-scale architecture."
         actions={[
           {
-            text: "Get Started for Free",
-            href: "#",
+            text: "Join The Family Now",
+            href: "/waitlist",
             variant: "default",
             isSignUpButton: true,
           },
